@@ -123,26 +123,26 @@ nav .icon-burger .line {
   top: 40%;
   transform: translateY(-50%);
   text-align: left;
-  color:dodgerblue;
+  color:darkblue;
   padding-left: 50px;
 }
 .card {
-  width: 300px;
-  height: 200px;
+  width: 280px;
+  height: 220px;
   display: inline-block;
   border-radius: 10px;
-  padding: 10px 25px;
+  padding: 20px 20px;
   box-sizing: border-box;
   cursor: pointer;
-  margin: 10px 15px;
-  color: burlywood;
+  margin: 5px 15px;
+  color: darkblue ;
   background-color: #cce6ff;
 
 }
 
 .row{
   display: flex;
-  height: 88%;
+  height: 100%;
   align-items: center;
 }
 .col{
