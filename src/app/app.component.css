@@ -125,6 +125,20 @@ nav .icon-burger .line {
   text-align: left;
   color:darkblue;
   padding-left: 50px;
+
+}
+
+.first1{
+  font-size: 70px;
+  padding-bottom: 10px;
+}
+.second1{
+  font-size: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.third1{
+  font-size: 50px;
 }
 .card {
   width: 280px;
@@ -147,4 +161,9 @@ nav .icon-burger .line {
 }
 .col{
   flex-basis: 50%;
+}
+
+.img1{
+  padding-top: 200px;
+  padding-left: 100px;
 }
