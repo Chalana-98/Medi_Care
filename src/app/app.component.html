@@ -1,139 +1,101 @@
+<div class="container">
+  <nav>
+    <input id="nav-toggle" type="checkbox">
+    <div class="logo">
+      <img src="assets/logo1-01.png" width="220" height="120">
+    </div>
+    <ul class="links">
+      <button mat-button color="primary" routerLink="/home_page">Home
 
-<nav>
-  <input id="nav-toggle" type="checkbox">
-  <div class="logo">
-    <img src="assets/logo1-01.png" width="220" height="120">
-  </div>
-  <ul class="links">
-    <button mat-button color="primary" disabled>Home</button>
+      </button>
 
-    <button mat-button color="primary">Blogs & Article</button>
-    <button mat-button color="primary">Health Matrix</button>
-    <section>
+      <button mat-button color="primary" routerLink="/blogs_page">Blogs & Article</button>
+      <button mat-button color="primary" routerLink="/matrix_page">Health Matrix</button>
+      <section>
 
-      <div class="example-button-row">
-        <div class="example-flex-container">
-          <div class="example-button-container">
-            <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-              <mat-icon>person</mat-icon>
-            </button>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <div class="example-button-container">
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/login">
+                  <mat-icon>sync</mat-icon>
+                  Log In
+                </button>
+                <button mat-menu-item routerLink="/register_page" >
+                  <mat-icon>sync_disabled</mat-icon>
+                  Log Out
+                </button>
+                <button mat-menu-item routerLink="/settings-page">
+                  <mat-icon >settings</mat-icon>
+                  Settings
+                </button>
+              </mat-menu>
+
+              <button mat-icon-button [matMenuTriggerFor]="menu" color="primary" aria-label="Example icon button with a delete icon">
+                <mat-icon>account_circle</mat-icon>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </ul>
-
-
-  <label for="nav-toggle" class="icon-burger">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </label>
-
-</nav>
-
-
-
-
-<!--Body-->
-<div class="row">
-  <div class="col-12" col-sm-6 >
-    <div class="content">
-      <h1 style="font-size: 7vw" >Protect Your Life</h1>
-      <h1 style="font-size: 5vw">And Take Care Of</h1>
-      <h1 style="font-size: 3vw">Your Health</h1>
-    </div>
-    <div class="col-12" col-sm-6   >
-     <img class="img-fluid" src="assets/back2.jpg" width="800px" height="700px" >
-    </div>
- </div>
-</div>
-
-
-
-    <div class="card">
-      <img src="assets/calendar.png" width="40px" height="40px">
-      <h3>
-        Save Your Medical Records
-      </h3>
-      <p>
-        Choose your doctor from thousands of specialist, general, and trusted hospitals
-      </p>
-    </div>
-    <div class="card">
-      <img src="assets/stethoscope.png" width="40px" height="40px">
-      <h3>
-        Track Your Medical Records
-      </h3>
-      <p>
-        Buy  your medicines with our mobile application with a simple delivery system
-      </p>
-    </div>
-    <div class="card">
-      <img src="assets/doctor.png" width="40px" height="40px" >
-      <h3>
-        Calculate Your Health
-        Care Matrix
-      </h3>
-      <p>
-        Free consultation with our trusted doctors and get the best recomendations
-      </p>
-    </div>
-    <div class="card">
-      <img src="assets/healthcare.png" width="40px" height="40px">
-      <h3>
-        Improve Your Health
-        Care Knowledge
-      </h3>
-      <p>
-        You can get 24/7 urgent care for yourself or your children and your
-        lovely family
-      </p>
-    </div>
-
-
-<div class="row">
-  <div class="col-6"><img class="img-fluid" src="assets/back1.jpg" width="150%" height="100%" ></div>
-</div>
-
-
-  <!-- Footer -->
-  <footer class="text-center text-white" style="background-color: #3f51b5">
-
-    <!-- Grid container -->
-    <div>
-      <p>
-        Medicare is a
-      </p>
-    </div>
-    <div >
-
-
-      <section >
-
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-rss"></a>
-        <a href="#" class="fa fa-google"></a>
 
       </section>
-      <!-- Section: Social -->
-    </div>
-    <!-- Grid container -->
+    </ul>
 
-    <!-- Copyright -->
-    <div
-      class="text-center p-3"
-      style="background-color: rgba(0, 0, 0, 0)"
+
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+
+  </nav>
+
+
+
+
+
+
+
+  <!-- End of .container -->
+
+</div>
+<router-outlet>
+
+</router-outlet>
+
+<!-- Footer -->
+<footer class="text-center text-white" style="background-color: #3f51b5">
+
+  <!-- Grid container -->
+  <div>
+    <p>
+      Medicare is a
+    </p>
+  </div>
+  <div >
+
+
+    <section >
+
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-rss"></a>
+      <a href="#" class="fa fa-google"></a>
+
+    </section>
+    <!-- Section: Social -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div
+    class="text-center p-3"
+    style="background-color: rgba(0, 0, 0, 0)"
+  >
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/"
+    >MDBootstrap.com</a
     >
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/"
-      >MDBootstrap.com</a
-      >
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
-
-<!-- End of .container -->
-
-<router-outlet></router-outlet>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->

@@ -101,79 +101,9 @@ nav .icon-burger .line {
     opacity: 0;
   }
 
-}
-.content h1 {
-  margin-bottom: 50px;
-}
-.content{
-  width: border-box;
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  text-align: left;
-  color:darkblue;
-  padding-left: 50px;
 
 }
 
-.col-12{
-  display: grid;
-  justify-content: flex-end;
-}
-
-.card {
-  width: 300px;
-  height: 250px;
-  display: inline-grid;
-  border-radius: 10px;
-  padding: 30px 30px;
-  box-sizing: border-box;
-  cursor: pointer;
-  margin: 5px 15px;
-  color: darkblue ;
-  background-color: #cce6ff;
-
-}
-
-.row{
-  display: flex;
-  height: 100%;
-  align-items: center;
-}
-.col{
-  flex-basis: 50%;
-}
-
-.img1{
-
-
-  padding-right: 20px;
-  padding-left: 50px;
-  padding-top: 50px;
-
-}
-.img2{
-  padding-left: 950px;
-  padding-top: 200px;
-
-}
-
-.img3{
-  padding-left: 40px;
-  padding-top: 400px;
-  padding-right:200px ;
-}
-
-.img-box{
-  width: 30%;
-  height: 300px;
-  position: absolute;
-
-}
-.row{
-  display: flex;
-  justify-content: left;
-}
 .fa {
   padding: 10px;
   font-size: 30px;
@@ -209,8 +139,7 @@ footer{
   background: #3f51b5;
   min-height: 50px;
   justify-content: center;
-
-
+  flex: content;
 
 
 }
