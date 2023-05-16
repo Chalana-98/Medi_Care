@@ -9,6 +9,9 @@ import {MatMenuModule} from "@angular/material/menu";
 import { LoginComponent } from './login/login.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { BlogsPageComponent } from './blogs-page/blogs-page.component';
+import { MatrixPageComponent } from './matrix-page/matrix-page.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
     AppComponent,
     LoginComponent,
     RegisterPageComponent,
-    SettingsPageComponent
+    SettingsPageComponent,
+    HomePageComponent,
+    BlogsPageComponent,
+    MatrixPageComponent
   ],
     imports: [
         BrowserModule,
