@@ -101,7 +101,9 @@ nav .icon-burger .line {
     opacity: 0;
   }
 
+
 }
+
 .content h1 {
   margin-bottom: 50px;
 }
@@ -207,10 +209,7 @@ footer{
 
   width:100% ;
   background: #3f51b5;
-  min-height: 50px;
+  min-height: 150px;
   justify-content: center;
-
-
-
 
 }

@@ -14,12 +14,29 @@
       <div class="example-button-row">
         <div class="example-flex-container">
           <div class="example-button-container">
-            <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-              <mat-icon>person</mat-icon>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item routerLink="/login">
+                <mat-icon>sync</mat-icon>
+                Log In
+              </button>
+              <button mat-menu-item >
+                <mat-icon>sync_disabled</mat-icon>
+
+                <a routerLink="/register_page" >Log Out</a>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>settings</mat-icon>
+                Settings
+              </button>
+            </mat-menu>
+
+            <button mat-icon-button [matMenuTriggerFor]="menu" color="primary" aria-label="Example icon button with a delete icon">
+              <mat-icon>account_circle</mat-icon>
             </button>
           </div>
         </div>
       </div>
+
     </section>
   </ul>
 
@@ -136,4 +153,6 @@
 
 <!-- End of .container -->
 
-<router-outlet></router-outlet>
+<router-outlet>
+
+</router-outlet>
