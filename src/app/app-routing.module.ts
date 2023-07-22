@@ -6,8 +6,10 @@ import {SettingsPageComponent} from "./settings-page/settings-page.component";
 import {HomePageComponent} from "./home-page/home-page.component";
 import {BlogsPageComponent} from "./blogs-page/blogs-page.component";
 import {MatrixPageComponent} from "./matrix-page/matrix-page.component";
+import {AppComponent} from "./app.component";
 
 const routes: Routes = [
+  {path: '', component: HomePageComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register_page', component: RegisterPageComponent},
   {path: 'settings-page', component: SettingsPageComponent},
