@@ -1,3 +1,4 @@
+
 article{
   margin-top: 100px;
 }
@@ -256,7 +257,7 @@ padding-left: 5px;
 
 .blog .blog-details .meta-bottom .tags li+li::before {
   padding-right: 6px;
-  color: var(--color-default);
+  color: darkblue 
   content: ",";
 }
 
@@ -269,4 +270,18 @@ padding-left: 5px;
 }
 
 
+
+=======
+/*mat-grid-tile {*/
+/*  background: lightblue;*/
+/*}*/
+/*.example-card {*/
+/*  padding-top: 5vw;*/
+/*  max-width: 300px;*/
+/*}*/
+
+/*.example-header-image {*/
+/*  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');*/
+/*  background-size: cover;*/
+/*}*/
 
