@@ -11,10 +11,10 @@
 /*}*/
 
 div {
-  
+
     margin-top: 10px;
     margin-bottom: 10px;
- 
+
   }
 .btn{
     background-color: #060713;
@@ -24,10 +24,10 @@ div {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    
-    
-   
-    
+
+
+
+
 }
 .rec177{
     background-color: #BFC2DA;
@@ -47,11 +47,56 @@ div {
 @media screen and (max-width: 768px) {
     .rec177{
         width: 80vw;
-    
+
     }
 
 
 }
- 
-=======
+
+
+
+
+div {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+.btn{
+    background-color: #060713;
+    color: #FFFFFF;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+
+}
+.rec177{
+    background-color: #BFC2DA;
+    width: 592px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding:30px;
+    padding-left: 150px;
+}
+
+.form-control{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .rec177{
+        width: 80vw;
+
+    }
+
+
+}
+
 
