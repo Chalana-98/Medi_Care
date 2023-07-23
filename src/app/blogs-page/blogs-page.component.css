@@ -1,6 +1,24 @@
 
-article{
+.header{
   margin-top: 100px;
+  padding-top: 100px;
+  
+}
+
+h1{
+  border-bottom:3px solid #000000;
+}
+
+
+.bordered-container{
+  color: #83848A;
+  text-align: center;
+  border-bottom:2px solid #83848A;
+}
+
+
+article{
+  margin-top: 10px;
 }
 
 .about .col-lg-9{
@@ -91,6 +109,7 @@ padding-left: 5px;
   font-weight: 700;
   padding: 0;
   margin: 0 0 20px 0;
+  text-align: center;
 }
 
 .blog .posts-list .title a {
@@ -258,7 +277,7 @@ padding-left: 5px;
 .blog .blog-details .meta-bottom .tags li+li::before {
   padding-right: 6px;
   color: darkblue 
-  content: ",";
+
 }
 
 .blog .blog-details .meta-bottom .share {
@@ -269,9 +288,37 @@ padding-left: 5px;
   padding-left: 5px;
 }
 
+/* Reset default margin and padding for body and content */
+body, .content {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the read more button */
+.read-more-button {
+  display: block;
+  background-color: #000000; 
+  color: #FFFFFF; 
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Position the button to the right side */
+.container {
+  position: relative;
+}
+
+.read-more-button {
+  position: absolute;
+  right: 20px; 
+  bottom: 20px; 
+}
 
 
-=======
+
+
 /*mat-grid-tile {*/
 /*  background: lightblue;*/
 /*}*/
