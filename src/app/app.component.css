@@ -9,6 +9,10 @@ nav {
   padding: 0 5%;
   height: 100px;
   background-color: #cce6ff;
+
+    box-shadow: 0 2px 4px rgba(10, 0, 0, 0.1);
+    /* Adjust the values as needed to control the shadow appearance */
+
 }
 nav .logo {
   float: left;
@@ -144,3 +148,5 @@ footer{
 
 
 }
+
+

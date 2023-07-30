@@ -1,27 +1,34 @@
 
 .content h1 {
-  margin-bottom: 50px;
+  margin-bottom: 5vw;
+  margin-top: 5vw;
 }
 .content{
-  width: border-box;
+  width: fit-content;
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
   text-align: left;
   color:darkblue;
   padding-left: 50px;
+  margin-top: 60px;
 
 }
 
-.row{
-  padding-left: 5vw;
+
+.row-fisrt{
+  padding-left: 4vw;
+  margin-bottom: 6vw;
+
 
 }
 
-.col-12{
+.col-12-img1{
   display: grid;
   justify-content: flex-end;
+  margin-top: 6vw;
 }
+
 
 .card {
   width: 300px;
@@ -34,13 +41,15 @@
   margin: 5px 15px;
   color: darkblue ;
   background-color: #cce6ff;
+  background: linear-gradient(to right, rgba(0, 123, 255, 0.21), rgba(154, 197, 244, 0.11));
 
 }
 
 .row{
-  display: flex;
+  display: contents;
   height: 100%;
   align-items: center;
+
 }
 .col{
   flex-basis: 50%;
@@ -73,8 +82,10 @@
 
 }
 .row{
-  display: flex;
-  justify-content: left;
+  display: contents;
+  justify-content:center;
+
+
 }
 .rec3 {
   border-radius: 25px;
@@ -89,5 +100,64 @@
   align-content: center;
 
 }
+
+
+.example-card {
+  margin-right: 60px;
+  margin-left: 60px;
+  align-content: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background: linear-gradient(to right, rgba(0, 123, 255, 0.21), rgba(154, 197, 244, 0.11));
+  border-radius: 10px;
+  margin-bottom: 5vw;
+}
+
+.card-content{
+  text-align: center;
+  font-size: 170%;
+}
+
+.card-title{
+  font-size: 350%;
+  padding-bottom: 50px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-line-height{
+  line-height: 1.6;
+}
+
+.card-action{
+  display: flex;
+  justify-content: center;
+
+}
+
+.btn-card1{
+  margin-right: 10px;
+  padding-right: 20px;
+
+}
+.btn-card2{
+  background: linear-gradient(to right, rgba(0, 123, 255, 0.51), rgba(30, 87, 153, 0.67));
+}
+
+
+.container-fluid{
+  position: page;
+  background-image: url("/assets/imgb.png");
+  background-position: 0px 2950px ;
+}
+
+.row1{
+
+  margin-left: 50px;
+}
+
 
 

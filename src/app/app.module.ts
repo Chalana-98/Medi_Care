@@ -12,6 +12,7 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { BlogsPageComponent } from './blogs-page/blogs-page.component';
 import { MatrixPageComponent } from './matrix-page/matrix-page.component';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 
 @NgModule({
@@ -24,13 +25,14 @@ import { MatrixPageComponent } from './matrix-page/matrix-page.component';
     BlogsPageComponent,
     MatrixPageComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        MyMaterialModule,
-        BrowserAnimationsModule,
-        MatMenuModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MyMaterialModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonToggleModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

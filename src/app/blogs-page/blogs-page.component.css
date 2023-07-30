@@ -2,7 +2,7 @@
 .header{
   margin-top: 100px;
   padding-top: 100px;
-  
+
 }
 
 h1{
@@ -278,7 +278,7 @@ padding-left: 5px;
   padding-right: 6px;
 
   color: darkblue
-  
+
 }
 
 .blog .blog-details .meta-bottom .share {
@@ -298,8 +298,8 @@ body, .content {
 /* Style the read more button */
 .read-more-button {
   display: block;
-  background-color: #000000; 
-  color: #FFFFFF; 
+  background: linear-gradient(to right, rgb(0, 123, 255), rgb(154, 197, 244));
+  color: #FFFFFF;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -313,8 +313,8 @@ body, .content {
 
 .read-more-button {
   position: absolute;
-  right: 20px; 
-  bottom: 20px; 
+  right: 20px;
+  bottom: 20px;
 }
 
 
