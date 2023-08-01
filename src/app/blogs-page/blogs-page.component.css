@@ -7,6 +7,8 @@
 
 h1{
   border-bottom:3px solid #000000;
+  font-family: sans-serif;
+  font-size: 32px;
 }
 
 
@@ -105,11 +107,12 @@ padding-left: 5px;
 }
 
 .blog .posts-list .title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   padding: 0;
   margin: 0 0 20px 0;
   text-align: center;
+  font-family: Sofia Sans;
 }
 
 .blog .posts-list .title a {
@@ -304,6 +307,9 @@ body, .content {
   text-decoration: none;
   border-radius: 5px;
   text-align: center;
+  position: absolute;
+  right: 20px; 
+  bottom: 20px; 
 }
 
 /* Position the button to the right side */
@@ -311,11 +317,13 @@ body, .content {
   position: relative;
 }
 
+
 .read-more-button {
   position: absolute;
   right: 20px;
   bottom: 20px;
 }
+
 
 
 
