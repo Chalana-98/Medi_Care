@@ -13,7 +13,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { BlogsPageComponent } from './blogs-page/blogs-page.component';
 import { MatrixPageComponent } from './matrix-page/matrix-page.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
-
+import { StatusPageComponent } from './status-page/status-page.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
     SettingsPageComponent,
     HomePageComponent,
     BlogsPageComponent,
-    MatrixPageComponent
+    MatrixPageComponent,
+    StatusPageComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,9 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
     MyMaterialModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSlideToggleModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

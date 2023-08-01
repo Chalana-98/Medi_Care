@@ -16,7 +16,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 @NgModule({
   imports : [
     MatAutocompleteModule,
@@ -35,8 +35,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatToolbarModule,
     MatBadgeModule,
     MatDialogModule,
-    MatSnackBarModule
-
+    MatSnackBarModule,
+    MatSlideToggleModule,
 
   ],
   exports : [
@@ -56,7 +56,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatToolbarModule,
     MatBadgeModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSlideToggleModule,
+
   ]
 })
 export  class MyMaterialModule{
