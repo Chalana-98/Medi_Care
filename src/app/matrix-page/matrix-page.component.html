@@ -81,7 +81,17 @@
         <div class="row mb-3">
           <div class="col-5"><label for="inputActivity" class="col-sm-4 col-form-label">Activity</label></div>
           <div class="col-6">
-            <input type="activity" class="form-control" id="inputActivity" placeholder="Sedentary(Office Job)">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle form-control" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Sedentary(Office Job)V
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Light Exercise</a></li>
+                <li><a class="dropdown-item" href="#">Moderate Exercise</a></li>
+                <li><a class="dropdown-item" href="#">Heavy Exercise</a></li>
+                <li><a class="dropdown-item" href="#">Athlete</a></li>
+              </ul>
+            </div>
           </div>
         </div> 
           <div class="row mb-3">
@@ -89,10 +99,10 @@
               <label for="inputBodyFat" class="col-sm-6 col-form-label">Body Fat</label>
             </div>
             <div class="col-3">
-              <input type="BodyFat" id="inputBodyFat" class="col-sm-6 form-control" aria-describedby="bodyfat">
+              <input type="BodyFat" id="inputBodyFat" class="col-sm-6 form-control" placeholder="15" aria-describedby="bodyfat">
             </div>
             <div class="col-auto col-md-2">
-              <span id="bodyfat" class="form-text">
+              <span id="bodyfat" class="form-text" >
                 %
               </span>
             </div>
@@ -102,8 +112,10 @@
         </div>
         <br><br>
     
-    <div class="mx-auto d-block text-center">
-      <button class="btn " type="button">Calculate</button>
+    <div class="calculate">
+      <div class="mx-auto d-block text-center">
+        <button class="btn" type="button">Calculate</button>
+      </div>
+    
     </div>
-  
   
