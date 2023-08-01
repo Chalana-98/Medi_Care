@@ -12,7 +12,10 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { BlogsPageComponent } from './blogs-page/blogs-page.component';
 import { MatrixPageComponent } from './matrix-page/matrix-page.component';
-
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import { StatusPageComponent } from './status-page/status-page.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,15 +25,19 @@ import { MatrixPageComponent } from './matrix-page/matrix-page.component';
     SettingsPageComponent,
     HomePageComponent,
     BlogsPageComponent,
-    MatrixPageComponent
+    MatrixPageComponent,
+    StatusPageComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        MyMaterialModule,
-        BrowserAnimationsModule,
-        MatMenuModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MyMaterialModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonToggleModule,
+    MatSlideToggleModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

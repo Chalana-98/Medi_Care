@@ -7,6 +7,7 @@ import {HomePageComponent} from "./home-page/home-page.component";
 import {BlogsPageComponent} from "./blogs-page/blogs-page.component";
 import {MatrixPageComponent} from "./matrix-page/matrix-page.component";
 import {AppComponent} from "./app.component";
+import {StatusPageComponent} from "./status-page/status-page.component";
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'home_page', component:HomePageComponent},
   {path: 'blogs_page', component:BlogsPageComponent},
   {path: 'matrix_page', component:MatrixPageComponent},
+  {path: 'status_page', component:StatusPageComponent},
 ];
 
 @NgModule({

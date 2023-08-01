@@ -1,41 +1,72 @@
 
 <!--Body-->
-<div class="row">
+<div class="container-fluid">
+<div class="row-fisrt">
   <div class="col-12" col-sm-6 >
-    <div class="content">
+    <div class="content" [@fadeInOut]>
       <h1 style="font-size: 7vw" >Protect Your Life</h1>
       <h1 style="font-size: 5vw">And Take Care Of</h1>
       <h1 style="font-size: 3vw">Your Health</h1>
+
+      <button mat-fab extended color="primary">
+
+        <div class="row">
+              Get Started
+          <div class="col-1">
+            <mat-icon>arrow_forward_ios</mat-icon>
+          </div>
+          <div class="col-2">
+
+          </div>
+
+        </div>
+
+
+      </button>
+
+
+
     </div>
-    <div class="col-12" col-sm-6   >
-      <img class="img-fluid" src="assets/back2.jpg" width="800px" height="700px" >
+    <div class="col-12-img1" col-sm-6 [@scaleInOut]  >
+      <img class="img-fluid" src="assets/back2.png" width="800px" height="700px" >
 
     </div>
   </div>
+
 </div>
 
-<div class="container my-5">
-  <div class="p-5 text-center bg-body-tertiary rounded-3">
-    <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="100" height="100"><use xlink:href="#bootstrap"></use></svg>
-    <h1 class="text-body-emphasis">Medi Care</h1>
-    <p class="col-lg-8 mx-auto fs-5 text-muted">
 
-      "Medi Care" is a comprehensive medical record web system designed to streamline and enhance healthcare facilities' patient management processes. It is a secure and user-friendly platform that allows healthcare professionals to efficiently store, access, and manage patient information in a digital format. The primary goal of "Medi Care" is to improve the quality of patient care, ensure accurate and up-to-date medical records, and facilitate seamless communication among healthcare providers.<code>.col-*</code> class, and a customized call to action.
+<mat-card class="example-card" [@slideInOut]>
+  <mat-card-header class="card-header">
+
+    <mat-card-title class="card-title" >Medi Care</mat-card-title>
+
+  </mat-card-header>
+
+  <mat-card-content class="card-content">
+    <p class="custom-line-height">
+      "Medi Care" is a comprehensive medical record web system designed to
+      streamline and enhance healthcare facilities' patient management processes.
+      It is a secure and user-friendly platform that allows healthcare professionals
+      to efficiently store, access, and manage patient information in a digital format.
+      The primary goal of "Medi Care" is to improve the quality of patient care,
+      ensure accurate and up-to-date medical records, and facilitate seamless communication among healthcare providers.
     </p>
-    <div class="d-inline-flex gap-2 mb-5" >
-      <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button" style="background-color: darkblue;">
-        Log In
-        <svg class="bi ms-2" width="24" height="24"><use xlink:href="#arrow-right-short"></use></svg>
-      </button>
-      <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
-        Register
-      </button>
-    </div>
-  </div>
-</div>
+  </mat-card-content>
+  <mat-card-actions class="card-action">
+    <button mat-fab extended class="btn-card1" color="primary">
+      Log  Now
+    </button>
+    <button mat-fab extended class="btn-card2" color=#cce6ff>
+      Register
+    </button>
+  </mat-card-actions>
+</mat-card>
 
 
-<div class="row">
+
+
+<div class="row1">
   <div class="card">
     <img src="assets/calendar.png" width="40px" height="40px">
     <h3>
@@ -79,9 +110,8 @@
 
 
 
-<div class="row">
-  <div class="col-6"><img class="img-fluid" src="assets/back1.jpg" width="150%" height="100%" ></div>
+<div class="row" >
+  <div class="col-6" [@rotateAnimation]><img class="img-fluid" src="assets/back1.png" width="150%" height="100%" ></div>
 </div>
 
-
-
+</div>
