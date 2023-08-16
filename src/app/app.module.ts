@@ -16,6 +16,7 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { StatusPageComponent } from './status-page/status-page.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {FormsModule} from "@angular/forms";
+import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {FormsModule} from "@angular/forms";
     HomePageComponent,
     BlogsPageComponent,
     MatrixPageComponent,
-    StatusPageComponent
+    StatusPageComponent,
+    PatientDashboardComponent
   ],
   imports: [
     BrowserModule,
