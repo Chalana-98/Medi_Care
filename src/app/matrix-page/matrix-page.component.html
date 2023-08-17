@@ -1,3 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light-blue">
+  <div class="container">
+    <!-- Logo on the left -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo1-01.png" width="200" height="100">
+    </a>
+
+    <!-- Button for mobile navigation toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation links on the right -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav" >
+        <!-- Your Angular Material buttons -->
+        <li class="nav-item" style="margin-right: 3vw;">
+          <button mat-button color="primary" routerLink="/home_page">Home</button>
+        </li>
+        <li class="nav-item" style="margin-right: 3vw;">
+          <button mat-button color="primary" routerLink="/blogs_page">Blogs & Article</button>
+        </li>
+        <li class="nav-item" style="margin-right: 3vw;">
+          <button mat-button color="primary" routerLink="/matrix_page">Health Matrix</button>
+        </li>
+        <li class="nav-item" style="margin-right: 3vw;">
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/login">
+              <mat-icon>sync</mat-icon>
+              Log In
+            </button>
+            <button mat-menu-item routerLink="/register_page">
+              <mat-icon>sync_disabled</mat-icon>
+              Log Out
+            </button>
+            <button mat-menu-item routerLink="/settings-page">
+              <mat-icon>settings</mat-icon>
+              Settings
+            </button>
+          </mat-menu>
+          <button mat-icon-button [matMenuTriggerFor]="menu" color="primary" aria-label="Profile">
+            <mat-icon>account_circle</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  
+</nav>
 
 
 
@@ -101,3 +152,34 @@
     </div>
 </div>
 
+
+
+
+<!--footer-->
+<footer class="text-white py-4">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <!-- Logo on the left -->
+      <img src="assets/logo1-01.png" alt="Logo" width="150" height="80">
+
+      <!-- Contact details on the right -->
+      <div class="contact-details">
+        <p>Contact: contact@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+      </div>
+      
+      <!-- Social icons on the right -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-google" ></i></a>
+        <a href="#"><i class="fab fa-facebook" ></i></a>
+        <a href="#"><i class="fa-solid fa-paper-plane" ></i></a>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col text-center">
+        &copy; 2023 Your Company. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
