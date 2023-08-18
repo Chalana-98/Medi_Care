@@ -1,14 +1,3 @@
-/*backgroundmat-grid-tile {*/
-/*  background: lightblue;*/
-/*}*/
-/*.example-card {*/
-/*  max-width: 400px;*/
-/*}*/
-
-/*.example-header-image {*/
-/*  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');*/
-/*  background-size: cover;*/
-/*}*/
 
 
 .bg-light-blue {
@@ -16,17 +5,9 @@
   }
 
   
-.container{
-  
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
 
-.container {
 
-  margin-top: 50px;
-  margin-bottom: 100px;
-}
+
 
 
 div {
@@ -35,16 +16,25 @@ div {
     margin-bottom: 10px;
 
   }
+
+
+  
 .btn{
-    background-color: #060713;
+    background-color: #3c4cf5;
     color: #FFFFFF;
     width: 150px;
     height: 40px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5vw;
+    border-radius: 18px;
+    
 
 }
+
+
+
 #dropdownMenuButton1{
     color:#83848A;
     background-color: #FFFFFF;
@@ -73,11 +63,7 @@ div {
     
 }
 
-.header{
-    margin-top: 100px;
-    padding-top: 100px;
-    
-}
+
 
 h1{
     border-bottom:3px solid #000000;
@@ -110,26 +96,6 @@ h1{
 
 
 
-div {
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-
-  }
-.btn{
-    background-color: #060713;
-    color: #FFFFFF;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-
-
-
-
-}
 .rec177{
     background-color: #BFC2DA;
     width: 592px;
@@ -155,7 +121,7 @@ div {
 }
 
 .header{
-    margin-top: 100px;
+  
     padding-top: 100px;
 
 }
