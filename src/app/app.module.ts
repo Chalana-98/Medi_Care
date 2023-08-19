@@ -17,6 +17,7 @@ import { StatusPageComponent } from './status-page/status-page.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {FormsModule} from "@angular/forms";
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard
     MatButtonToggleModule,
     MatSlideToggleModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
