@@ -14,6 +14,9 @@ export interface PhoneNumber {
     email: string;
     address: string;
     userType: string;
+    height?: number; 
+    weight?: number; 
+    speciality?: string;
     phoneNumbers: PhoneNumber[];
   }
   

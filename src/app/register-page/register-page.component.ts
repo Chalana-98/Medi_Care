@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
@@ -28,7 +28,10 @@ export class RegisterPageComponent implements OnInit {
     birthday: new Date(),
     email: '',
     address: '',
-    userType: '',
+    userType: 'patient',
+    height: 0.0,
+    weight:0.0,
+    speciality:'',
     phoneNumbers: [{
       id: 0,
       userId: 0,
@@ -38,7 +41,13 @@ export class RegisterPageComponent implements OnInit {
 
   onSwitchChange(event: any) {
     this.registerUser.userType = event.target.checked ? 'doctor' : 'patient';
+  
+   
+    if (this.registerUser.userType === 'patient') {
+      this.registerUser.speciality = '';
+    }
   }
+  
 
   addPhoneNumber() {
     this.registerUser.phoneNumbers.push({
@@ -61,7 +70,9 @@ export class RegisterPageComponent implements OnInit {
   }
 
   private performRegistration() {
-    this.http.post('https://localhost:7212/api/User/', this.registerUser)
+    //const requestData = JSON.stringify(this.registerUser);
+
+    this.http.post('https://localhost:7212/api/User/Register', this.registerUser)
       .subscribe(
         (response: any) => {
           alert('Registration successful!');
@@ -78,6 +89,7 @@ export class RegisterPageComponent implements OnInit {
   }
 
   private showValidationError() {
-    alert('Form is invalid. Please check the required fields.');
+    // alert('Form is invalid. Please check the required fields.');
+    console.log('Please check the required fields');
   }
 }

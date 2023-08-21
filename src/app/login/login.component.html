@@ -60,10 +60,7 @@
 
         <div class="card" style="border-radius: 1rem;">
 
-          <label class="switch mt-4">
-            <input type="checkbox">
-            <span class="slider"></span>
-          </label>
+       
 
 
           <div class="row g-0">
@@ -73,38 +70,31 @@
             </div>
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-
-                <form>
-
-                  <div class="d-flex align-items-center mb-3 pb-1">
-
-<!--                    <span class="h1 fw-bold mb-0">Logo</span>-->
-                    <div class="logo">
-                      <img src="assets/logo1-01.png" width="220" height="120">
+                <form #loginForm="ngForm" (ngSubmit)="onSubmit()"class="mx-1 mx-md-4">
+                  
+    
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)]="loginUser.email" name="email" class="form-control" placeholder="Email" required>
                     </div>
                   </div>
-
-                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
-
-                  <div class="form-outline mb-4">
-                    <input type="email" id="form2Example17" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example17">Email address</label>
+    
+                 
+  
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)]="loginUser.password" name="password" class="form-control" placeholder="Password" required>
+                    </div>
                   </div>
-
-                  <div class="form-outline mb-4">
-                    <input type="password" id="form2Example27" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example27">Password</label>
+                  
+  
+    
+                  <div class="text-danger" *ngIf="loginForm.submitted && !loginForm.valid">
+                    Please check the required fields.
                   </div>
-
-                  <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="button" routerLink="/patient_dashboard">Login</button>
-                  </div>
-
-                  <a class="small text-muted" href="#!">Forgot password?</a>
-                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a routerLink="/register_page"
-                   style="color: #393f81;">Register here</a></p>
-                  <a href="#!" class="small text-muted">Terms of use.</a>
-                  <a href="#!" class="small text-muted">Privacy policy</a>
+                  <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
 
               </div>

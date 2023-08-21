@@ -121,11 +121,37 @@
                     <input [(ngModel)]="registerUser.address" name="address" class="form-control" placeholder="Address" required>
                   </div>
                 </div>
-  
+
+
                 <div class="d-flex flex-row align-items-center mb-4">
                   <i class="fas fa-user-tag fa-lg me-3 fa-fw"></i>
                   <div class="form-outline flex-fill mb-0">
                     <input [(ngModel)]="registerUser.userType" name="userType" class="form-control" placeholder="User Type" readonly required>
+                  </div>
+                </div>
+                
+                <div *ngIf="registerUser.userType === 'patient'">
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-weight fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)]="registerUser.weight" name="weight" class="form-control" placeholder="Weight">
+                    </div>
+                  </div>
+                
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-arrows-alt-v fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)]="registerUser.height" name="height" class="form-control" placeholder="Height">
+                    </div>
+                  </div>
+                </div>
+                
+                <div *ngIf="registerUser.userType === 'doctor'">
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-stethoscope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input [(ngModel)]="registerUser.speciality" name="speciality" class="form-control" placeholder="Speciality">
+                    </div>
                   </div>
                 </div>
   
