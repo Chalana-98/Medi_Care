@@ -3,7 +3,7 @@
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                 <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-black text-decoration-none">
-                    <img src="assets/logo1-01.png" width="200" height="100" style="margin-top: 20px;">
+                    <img src="assets/logo1-01.png" width="160" height="100" style="margin-top: 20px;">
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-black" id="menu">
                     <li class="nav-item" style="margin-top: 20px;">
@@ -82,6 +82,36 @@
             </div>
         </div>
         <div class="col py-3">
+
+          <!-- try -->
+          <style>
+            /* Default styles for the icon and text */
+            .nav-link {
+                color: rgb(74, 74, 74) !important; /* !important to override the default Bootstrap styles */
+            }
+        
+            /* Styles for the icon and text when active/clicked */
+            .nav-link.active, .nav-link:focus, .nav-link:hover {
+                color: rgb(9, 41, 185) !important; /* !important to override the default Bootstrap styles */
+            }
+        </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      var navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+              navLinks.forEach(function (otherLink) {
+                  otherLink.classList.remove("active");
+              });
+              this.classList.add("active");
+          });
+      });
+  });
+</script>
+
+          <!-- try -->
 
 
             <!-- Navbar-->
@@ -166,6 +196,99 @@
     </div>
   </nav>
   <!-- Navbar -->
+  <br>
+
+
+  <!-- content card -->
+
+  <div class="card w-100 " style="border-radius: 10px;">
+    <div class="card-body" style="background: rgb(70, 64, 184);
+    background: linear-gradient(90deg, rgba(70, 64, 184, 1) 0%, rgba(59, 59, 203, 0.9226540958180147) 61%, rgba(98, 245, 176, 0.8666316868544293) 100%); border-radius: 10px;">
+        <div class="row">
+            <!-- Left column for card title, card text, and button -->
+            <div class="col-md-8">
+                <h3 class="card-title text-white">Hello Chalana Shehara</h3>
+                <p class="card-text text-white">Have a nice day and don’t forget to take care of your health!</p>
+                <a href="#" class="btn btn-primary">Button</a>
+            </div>
+            <!-- Right column for avatar -->
+            <div class="col-md-2 text-right" style="margin-left: 10vw;">
+                <div  style=" border-radius: 10px; padding: 10px;">
+                    <img src="assets/avatardoc.png" alt="Avatar" style="width: 120px; height: 120px; border-radius: 10px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <br> 
+  
+  
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card-body" style="background: rgb(209, 208, 243); border-radius: 10px;">
+          <div class="row">
+              <!-- Left column for card title, card text, and button -->
+
+              <div class="col-md-2 text-right" style="margin-left: 1vw; margin-top: 1vw;">
+                <div  style=" border-radius: 10px; ">
+                    <img src="assets/avatardoc.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 10px;">
+                </div>
+            </div>
+
+              <div class="col-md-8">
+                  <h3 class="card-title text-white">Hello Chalana Shehara</h3>
+                  <p class="card-text text-white">Have a nice day and don’t forget to take care of your health!</p>
+                 
+              </div>
+              <!-- Right column for avatar -->
+              
+          </div>
+      </div>
+    </div>
+  
+    <div class="col-md-3">
+      <div class="card-body" style="background: rgb(209, 208, 243); border-radius: 10px;">
+          <div class="row">
+              <!-- Left column for card title, card text, and button -->
+
+              <div class="col-md-2 text-right" style="margin-left: 1vw; margin-top: 1vw;">
+                <div  style=" border-radius: 10px; ">
+                    <img src="assets/avatardoc.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 10px;">
+                </div>
+            </div>
+
+              <div class="col-md-8">
+                  <h3 class="card-title text-white">Hello Chalana Shehara</h3>
+                  <p class="card-text text-white">Have a nice day and don’t forget to take care of your health!</p>
+                 
+              </div>
+              <!-- Right column for avatar -->
+              
+          </div>
+      </div>
+    </div>
+
+     <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+         
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  
+
+  
+ <br>
+ 
+  <!-- content card -->
+
+
 
   
 
