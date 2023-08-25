@@ -1,10 +1,6 @@
 
 import { Component } from '@angular/core';
 
-
-
-
-
 @Component({
   selector: 'app-patient-dashboard',
   templateUrl: './patient-dashboard.component.html',
@@ -14,5 +10,7 @@ import { Component } from '@angular/core';
 })
 export class PatientDashboardComponent {
  
+  
 
 }
+

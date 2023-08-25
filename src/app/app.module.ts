@@ -19,6 +19,8 @@ import {FormsModule} from "@angular/forms";
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     BlogsPageComponent,
     MatrixPageComponent,
     StatusPageComponent,
-    PatientDashboardComponent
+    PatientDashboardComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatSlideToggleModule,
     FormsModule,
     HttpClientModule,
+  
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
