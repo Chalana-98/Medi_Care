@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ChartComponent } from './widget/chart/chart.component';
 import { SidenavComponent } from './widget/sidenav/sidenav.component';
 import { ContentCardsComponent } from './widget/content-cards/content-cards.component';
+import { PatientRightcardComponent } from './widget/patient-rightcard/patient-rightcard.component';
+
 
 
 
@@ -38,6 +40,7 @@ import { ContentCardsComponent } from './widget/content-cards/content-cards.comp
     ChartComponent,
     SidenavComponent,
     ContentCardsComponent,
+    PatientRightcardComponent,
     
   ],
   imports: [

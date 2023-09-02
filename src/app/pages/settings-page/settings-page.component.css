@@ -1,9 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.demo-inline-calendar-card {
+	width: 300px;
+  }
 
+  
 
-
-.group:hover .group-hover\:block {
-	display: block;
-}
+  

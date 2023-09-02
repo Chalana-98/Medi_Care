@@ -17,6 +17,8 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   imports : [
@@ -38,6 +40,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatDialogModule,
     MatSnackBarModule,
     MatSlideToggleModule,
+    MatNativeDateModule,
+    MatDatepickerModule
   
 
   ],
@@ -60,6 +64,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatDialogModule,
     MatSnackBarModule,
     MatSlideToggleModule,
+    MatNativeDateModule,
+    MatDatepickerModule
 
 
   ]
