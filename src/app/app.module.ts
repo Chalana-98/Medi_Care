@@ -22,6 +22,8 @@ import { ChartComponent } from './widget/chart/chart.component';
 import { SidenavComponent } from './widget/sidenav/sidenav.component';
 import { ContentCardsComponent } from './widget/content-cards/content-cards.component';
 import { PatientRightcardComponent } from './widget/patient-rightcard/patient-rightcard.component';
+import { CalenderPageComponent } from './widget/calender-page/calender-page.component';
+import { EventcardComponent } from './eventcard/eventcard.component';
 
 
 
@@ -41,6 +43,8 @@ import { PatientRightcardComponent } from './widget/patient-rightcard/patient-ri
     SidenavComponent,
     ContentCardsComponent,
     PatientRightcardComponent,
+    CalenderPageComponent,
+    EventcardComponent,
     
   ],
   imports: [
