@@ -1,0 +1,182 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light-blue" style="position: fixed; top: 0; width: 100%;  z-index: 1000;">
+  <div class="container">
+    <!-- Logo on the left -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo1-01.png" width="200" height="100">
+    </a>
+
+    <!-- Button for mobile navigation toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation links on the right -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav" >
+        <!-- Your Angular Material buttons -->
+        <li class="nav-item" style="margin-right: 3vw;">
+          <button mat-button color="primary" routerLink="/home_page">Home</button>
+        </li>
+        <li class="nav-item" style="margin-right: 3vw;">
+          <button mat-button color="primary" routerLink="/blogs_page">Blogs & Article</button>
+        </li>
+        <li class="nav-item" style="margin-right: 3vw;">
+          <button mat-button color="primary" routerLink="/matrix_page">Health Matrix</button>
+        </li>
+        <li class="nav-item" style="margin-right: 3vw;">
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/login">
+              <mat-icon>sync</mat-icon>
+              Log In
+            </button>
+            <button mat-menu-item routerLink="/register_page">
+              <mat-icon>sync_disabled</mat-icon>
+              Log Out
+            </button>
+            <button mat-menu-item routerLink="/settings-page">
+              <mat-icon>settings</mat-icon>
+              Settings
+            </button>
+          </mat-menu>
+          <button mat-icon-button [matMenuTriggerFor]="menu" color="primary" aria-label="Profile">
+            <mat-icon>account_circle</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<div class="container">
+    <div class="header">
+      <h1><b>Fitness Calculators</b></h1>
+    </div>
+    <br>
+    <div class="cal">
+    <div >
+      <div class="matric">
+
+        <h4 class="text"><b>Fitness Calculators</b></h4>
+      </div>
+        <div class="rec177">
+        <div class="row mb-3">
+          <div class="col-5">
+            <label for="gender" class="col-sm-4 col-form-label">Gender</label>
+          </div>
+
+          <div class="col-3">
+          <input type="radio" id="male" name="gender"  value="male">
+          <label for="male">Male</label>
+         </div>
+        <div class="col-3">
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+       </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-5"> <label for="inputAge" class="col-sm-4 col-form-label">Age</label></div>
+
+          <div class="col-3">
+            <input type="age" class="form-control" id="inputAge">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+
+          <div class="col-5"><label for="inputWeight" class="col-sm-4 col-form-label">Weight</label></div>
+
+          <div class="col-3">
+            <input type="weight" class="form-control" id="inputWeight" placeholder="kg">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-5"><label for="inputHeight" class="col-sm-4 col-form-label">Height</label></div>
+          <div class="col-3">
+            <input type="height" class="form-control" id="inputHeight" placeholder="cm" >
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-5"><label for="inputActivity" class="col-sm-4 col-form-label">Activity</label></div>
+          <div class="col-6">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle form-control" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Sedentary(Office Job)V
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Light Exercise</a></li>
+                <li><a class="dropdown-item" href="#">Moderate Exercise</a></li>
+                <li><a class="dropdown-item" href="#">Heavy Exercise</a></li>
+                <li><a class="dropdown-item" href="#">Athlete</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+          <div class="row mb-3">
+            <div class="col-5">
+              <label for="inputBodyFat" class="col-sm-6 col-form-label">Body Fat</label>
+            </div>
+            <div class="col-3">
+              <input type="BodyFat" id="inputBodyFat" class="col-sm-6 form-control" placeholder="15" aria-describedby="bodyfat">
+            </div>
+            <div class="col-auto col-md-2">
+              <span id="bodyfat" class="form-text" >
+                %
+              </span>
+            </div>
+          </div>
+
+
+        </div>
+        <br><br>
+
+    
+    
+
+
+    <div class="mx-auto d-block text-center">
+      <button class="btn " type="button"  routerLink="/status_page">Calculate</button>
+    </div>
+
+    
+
+
+    </div>
+    </div>
+</div>
+
+
+
+<!--footer-->
+<footer class="text-white py-4">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <!-- Logo on the left -->
+      <img src="assets/logonav.png" alt="Logo" width="200" height="80">
+
+      <!-- Contact details on the right -->
+      <div class="contact-details">
+        <p>Contact: medicare@gmail.com</p>
+        <p>Phone: (123) 456-7890</p>
+      </div>
+      
+      <!-- Social icons on the right -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-google" ></i></a>
+        <a href="#"><i class="fab fa-facebook" ></i></a>
+        <a href="#"><i class="fa-solid fa-paper-plane" ></i></a>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col text-center">
+        &copy; 2023 Medi Care. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>

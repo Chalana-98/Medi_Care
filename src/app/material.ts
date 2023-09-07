@@ -16,6 +16,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   imports : [
@@ -35,8 +38,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatToolbarModule,
     MatBadgeModule,
     MatDialogModule,
-    MatSnackBarModule
-
+    MatSnackBarModule,
+    MatSlideToggleModule,
+    MatNativeDateModule,
+    MatDatepickerModule
+  
 
   ],
   exports : [
@@ -56,7 +62,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatToolbarModule,
     MatBadgeModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSlideToggleModule,
+    MatNativeDateModule,
+    MatDatepickerModule
+
+
   ]
 })
 export  class MyMaterialModule{

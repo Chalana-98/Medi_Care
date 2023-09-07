@@ -1,0 +1,204 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light-blue" style="position: fixed; top: 0; width: 100%;  z-index: 1000;">
+  <div class="container">
+    <!-- Logo on the left -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo1-01.png" width="200" height="100">
+    </a>
+
+    <!-- Button for mobile navigation toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation links on the right -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav" >
+        <!-- Your Angular Material buttons -->
+        <li class="nav-item" style="margin-right: 3vw;">
+          <button mat-button color="primary" routerLink="/home_page">Home</button>
+        </li>
+        <li class="nav-item" style="margin-right: 3vw;">
+          <button mat-button color="primary" routerLink="/blogs_page">Blogs & Article</button>
+        </li>
+        <li class="nav-item" style="margin-right: 3vw;">
+          <button mat-button color="primary" routerLink="/matrix_page">Health Matrix</button>
+        </li>
+        <li class="nav-item" style="margin-right: 3vw;">
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/login">
+              <mat-icon>sync</mat-icon>
+              Log In
+            </button>
+            <button mat-menu-item routerLink="/register_page">
+              <mat-icon>sync_disabled</mat-icon>
+              Log Out
+            </button>
+            <button mat-menu-item routerLink="/settings-page">
+              <mat-icon>settings</mat-icon>
+              Settings
+            </button>
+          </mat-menu>
+          <button mat-icon-button [matMenuTriggerFor]="menu" color="primary" aria-label="Profile" >
+            <mat-icon>account_circle</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  
+</nav>
+
+
+
+
+<!--Body-->
+<div class="container-fluid">
+<div class="row-fisrt">
+  <div class="col-12" col-sm-6 >
+    <div class="content" [@fadeInOut]>
+      <h1 style="font-size: 7vw" >Protect Your Life</h1>
+      <h1 style="font-size: 5vw">And Take Care Of</h1>
+      <h1 style="font-size: 3vw">Your Health</h1>
+
+
+        <button class="cssbuttons-io-button"> Get started
+          <div class="icon">
+            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+          </div>
+        </button>
+
+
+      
+
+
+
+    </div>
+    <div class="col-12-img1" col-sm-6 [@scaleInOut]  >
+      <img class="img-fluid" src="assets/back2.png" width="800px" height="700px" >
+
+    </div>
+  </div>
+
+</div>
+
+
+<mat-card class="example-card" [@slideInOut]>
+  <mat-card-header class="card-header">
+
+    <mat-card-title class="card-title" >Medi Care</mat-card-title>
+
+  </mat-card-header>
+
+  <mat-card-content class="card-content">
+    <p class="custom-line-height">
+      "Medi Care" is a comprehensive medical record web system designed to
+      streamline and enhance healthcare facilities' patient management processes.
+      It is a secure and user-friendly platform that allows healthcare professionals
+      to efficiently store, access, and manage patient information in a digital format.
+      The primary goal of "Medi Care" is to improve the quality of patient care,
+      ensure accurate and up-to-date medical records, and facilitate seamless communication among healthcare providers.
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="card-action">
+    <button mat-fab extended class="btn-card1" color="primary">
+      Log  Now
+    </button>
+    <button mat-fab extended class="btn-card2" color=#cce6ff>
+      Register
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+
+
+
+<div class="row1">
+  <div class="card">
+    <img src="assets/calendar.png" width="40px" height="40px">
+    <h3>
+      Save Your Medical Records
+    </h3>
+    <p>
+      Choose your doctor from thousands of specialist, general, and trusted hospitals
+    </p>
+  </div>
+  <div class="card">
+    <img src="assets/stethoscope.png" width="40px" height="40px">
+    <h3>
+      Track Your Medical Records
+    </h3>
+    <p>
+      Buy  your medicines with our mobile application with a simple delivery system
+    </p>
+  </div>
+  <div class="card">
+    <img src="assets/doctor.png" width="40px" height="40px" >
+    <h3>
+      Calculate Your Health
+      Care Matrix
+    </h3>
+    <p>
+      Free consultation with our trusted doctors and get the best recomendations
+    </p>
+  </div>
+  <div class="card">
+    <img src="assets/healthcare.png" width="40px" height="40px">
+    <h3>
+      Improve Your Health
+      Care Knowledge
+    </h3>
+    <p>
+      You can get 24/7 urgent care for yourself or your children and your
+      lovely family
+    </p>
+  </div>
+</div>
+
+
+
+<div class="row" >
+  <div class="col-6" [@rotateAnimation]><img class="img-fluid" src="assets/back1.png" width="150%" height="100%" ></div>
+</div>
+
+
+
+<!--footer-->
+
+
+
+</div>
+
+
+
+
+
+<!--footer-->
+<footer class="text-white py-4">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <!-- Logo on the left -->
+      <img src="assets/logonav.png" alt="Logo" width="200" height="80">
+
+      <!-- Contact details on the right -->
+      <div class="contact-details">
+        <p>Contact: medicare@gmail.com</p>
+        <p>Phone: (123) 456-7890</p>
+      </div>
+      
+      <!-- Social icons on the right -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-google" ></i></a>
+        <a href="#"><i class="fab fa-facebook" ></i></a>
+        <a href="#"><i class="fa-solid fa-paper-plane" ></i></a>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col text-center">
+        &copy; 2023 Medi Care. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
