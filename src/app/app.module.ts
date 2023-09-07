@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MyMaterialModule} from "./material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DoctorFormComponent } from './doctor-form/doctor-form.component';
+
 import {MatMenuModule} from "@angular/material/menu";
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
@@ -28,9 +30,13 @@ import { EventcardComponent } from './eventcard/eventcard.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+
+    DoctorFormComponent
+
     LoginComponent,
     RegisterPageComponent,
     SettingsPageComponent,
@@ -46,6 +52,7 @@ import { EventcardComponent } from './eventcard/eventcard.component';
     CalenderPageComponent,
     EventcardComponent,
     
+
   ],
   imports: [
     BrowserModule,
