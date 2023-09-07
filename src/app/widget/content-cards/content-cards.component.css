@@ -1,0 +1,7 @@
+
+  .card.w-100 {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of elements, so .avatar is on the right */
+    height: 12vw;
+}
+

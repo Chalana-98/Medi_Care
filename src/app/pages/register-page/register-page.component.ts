@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../models/user.model';
+import { User } from '../../models/user.model';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
