@@ -47,6 +47,14 @@ export class LoginComponent implements OnInit {
       this.showValidationError();
     }
   }
+  onSwitchChange(event: any) {
+    this.loginUser.userType = event.target.checked ? 'doctor' : 'patient';
+  
+   
+    if (this.loginUser.userType === 'patient') {
+      this.loginUser.speciality = '';
+    }
+  }
 
   private performLogin() {
     this.http.post('https://localhost:7212/api/User/LogIn', this.loginUser)
