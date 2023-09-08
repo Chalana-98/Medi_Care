@@ -20,6 +20,10 @@ import {FormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
+
+    DoctorFormComponent,
+
+
     LoginComponent,
     RegisterPageComponent,
     SettingsPageComponent,
