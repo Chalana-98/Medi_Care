@@ -35,7 +35,7 @@ import { EventcardComponent } from './eventcard/eventcard.component';
   declarations: [
     AppComponent,
 
-    DoctorFormComponent
+    DoctorFormComponent,
 
     LoginComponent,
     RegisterPageComponent,
