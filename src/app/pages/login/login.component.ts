@@ -47,6 +47,11 @@ export class LoginComponent implements OnInit {
       this.showValidationError();
     }
   }
+  onSwitchChange(event: any) {
+    this.loginUser.userType = event.target.checked ? 'doctor' : 'patient';
+  
+
+  }
 
   private performLogin() {
     this.http.post('https://localhost:7212/api/User/LogIn', this.loginUser)
@@ -55,7 +60,17 @@ export class LoginComponent implements OnInit {
           alert('Login successful!');
           console.log('Login successful:', response);
           this.loginForm.resetForm();
-          this.router.navigate(['./patient_dashboard']); 
+          if (this.loginUser.userType == 'patient') {
+
+            this.router.navigate(['./patient_dashboard']); 
+          }
+          else if (this.loginUser.userType == 'doctor') {
+            this.router.navigate(['./doctor_dashboard']); 
+          }
+          else{
+            alert('Error during Login.cheak user type');
+          }
+          
         },
         (error: any) => {
           alert('Error during Login. Please try again.');

@@ -80,7 +80,7 @@
 
 .content h1 {
   margin-bottom: 5vw;
-  margin-top: 5vw;
+  margin-top: 1vw;
 }
 .content{
   width: fit-content;
@@ -90,7 +90,7 @@
   text-align: left;
   color:darkblue;
   padding-left: 50px;
-  margin-top: 60px;
+  margin-top: 10vw;
 
 }
 
@@ -229,8 +229,9 @@
 
 .container-fluid{
   position: page;
-  background-image: url("/assets/imgba.png");
+  background-image: url("/assets/imgba.png " ) ;
   background-position: 0px 1000px ;
+  
 }
 
 .row1{

@@ -9,6 +9,8 @@ import {MatrixPageComponent} from "./pages/matrix-page/matrix-page.component";
 import {AppComponent} from "./app.component";
 import {StatusPageComponent} from "./pages/status-page/status-page.component";
 import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
+import { DoctorFormComponent } from './doctor-form/doctor-form.component';
+import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path: 'matrix_page', component:MatrixPageComponent},
   {path: 'status_page', component:StatusPageComponent},
   {path: 'patient_dashboard', component:PatientDashboardComponent},
+  {path: 'doctor_form', component:DoctorFormComponent},
+  {path: 'doctor_dashboard', component:DoctorDashboardComponent}
 ];
 
 @NgModule({
