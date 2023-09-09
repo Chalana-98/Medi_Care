@@ -28,6 +28,7 @@ import { ContentCardsComponent } from './widget/content-cards/content-cards.comp
 import { PatientRightcardComponent } from './widget/patient-rightcard/patient-rightcard.component';
 import { CalenderPageComponent } from './widget/calender-page/calender-page.component';
 import { EventcardComponent } from './eventcard/eventcard.component';
+import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 
 
 
@@ -53,6 +54,7 @@ import { EventcardComponent } from './eventcard/eventcard.component';
     PatientRightcardComponent,
     CalenderPageComponent,
     EventcardComponent,
+    DoctorDashboardComponent,
     
 
   ],
