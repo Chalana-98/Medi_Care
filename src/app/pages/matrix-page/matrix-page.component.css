@@ -7,16 +7,13 @@
   
 
 
-
-
-
-div {
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-  }
-
+  .content {
+    background-image: url("/assets/imgba.png"); /* Replace with the path to your background image */
+    background-size: cover; /* Adjust the background size to cover the container */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; /* Center the background image */
+    padding-top: 50px; /* Add any necessary padding */
+}
 
   
 .btn{
@@ -55,7 +52,14 @@ div {
     margin-right: auto;
     padding:30px;
     padding-left: 150px;
+    border-radius: 25px;
 
+}
+
+.img-fluid{
+    width: 592px;
+    height: auto;
+    padding-top: 50px;
 }
 
 .form-control{
@@ -74,12 +78,14 @@ h1{
 .matric {
     width: 100%; /* Ensures the container takes full width of the viewport */
     margin-left:-260px;
+    margin-top: 20px;
     text-decoration-color: #070815;
     
 }
 .text {
     font-size: 16px; /* Set your desired font size */
     text-align: center; /* Center the text horizontally */
+    margin-left: 60px;
 }
 
 
@@ -111,18 +117,22 @@ h1{
 }
 
 
+
 @media screen and (max-width: 768px) {
-    .rec177{
+    .rec177 {
         width: 80vw;
-
+        max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+        padding-left: 20px; /* Adjust padding as needed */
+        padding-right: 20px; /* Adjust padding as needed */
     }
-
-
 }
+
 
 .header{
   
-    padding-top: 100px;
+    padding-top: 120px;
+   padding-left: 100px;
+   padding-right: 100px;
 
 }
 
@@ -138,6 +148,7 @@ h1{
 .text {
     font-size: 16px; /* Set your desired font size */
     text-align: center; /* Center the text horizontally */
+    padding-left: auto;
 }
  
 
