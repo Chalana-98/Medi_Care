@@ -1,3 +1,5 @@
+import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
+import { TuiRootModule, TuiDialogModule, TuiAlertModule, TUI_SANITIZER } from "@taiga-ui/core";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -35,7 +37,7 @@ import { EventcardComponent } from './eventcard/eventcard.component';
   declarations: [
     AppComponent,
 
-    DoctorFormComponent
+    DoctorFormComponent,
 
     LoginComponent,
     RegisterPageComponent,
@@ -64,11 +66,11 @@ import { EventcardComponent } from './eventcard/eventcard.component';
     MatSlideToggleModule,
     FormsModule,
     HttpClientModule,
-  
-    
-    
-  ],
-  providers: [],
+      TuiRootModule,
+      TuiDialogModule,
+      TuiAlertModule
+],
+  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

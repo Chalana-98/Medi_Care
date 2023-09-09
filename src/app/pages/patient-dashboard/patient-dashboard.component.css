@@ -5,11 +5,18 @@
 
 
 
-.col-md-6 >* {
+.col-md-6>* {
   display: flex;
   justify-content: center;
   align-items: center;
   
 }
 
+
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
