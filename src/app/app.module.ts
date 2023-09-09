@@ -1,5 +1,5 @@
-import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
-import { TuiRootModule, TuiDialogModule, TuiAlertModule, TUI_SANITIZER } from "@taiga-ui/core";
+
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -40,6 +40,9 @@ import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.co
 
     DoctorFormComponent,
 
+    DoctorFormComponent,
+
+
     LoginComponent,
     RegisterPageComponent,
     SettingsPageComponent,
@@ -58,6 +61,8 @@ import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.co
     
 
   ],
+
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -68,11 +73,9 @@ import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.co
     MatSlideToggleModule,
     FormsModule,
     HttpClientModule,
-      TuiRootModule,
-      TuiDialogModule,
-      TuiAlertModule
+      
 ],
-  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
