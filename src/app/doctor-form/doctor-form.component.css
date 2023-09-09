@@ -2,12 +2,16 @@
     max-width: 80%;
 }
 
+.container{
+  width: 80;
+}
+
 .toolbar {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 10%;
     display: flex;
     align-items: center;
     background-color: #b6cbe0;
@@ -91,6 +95,10 @@
     left: -230px;
     z-index: -10;
     width: 1920px;
+  }
+
+  .img-fluid{
+    height: 80%;
   }
 
   /* Responsive Styles */
