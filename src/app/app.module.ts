@@ -34,9 +34,7 @@ import { EventcardComponent } from './eventcard/eventcard.component';
 @NgModule({
   declarations: [
     AppComponent,
-
-    DoctorFormComponent
-
+    DoctorFormComponent,
     LoginComponent,
     RegisterPageComponent,
     SettingsPageComponent,
