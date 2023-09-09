@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['./patient_dashboard']); 
           }
           else if (this.loginUser.userType == 'doctor') {
-            this.router.navigate(['./patient_dashboard']); 
+            this.router.navigate(['./doctor_dashboard']); 
           }
           else{
             alert('Error during Login.cheak user type');

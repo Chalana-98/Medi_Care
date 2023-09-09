@@ -1,5 +1,4 @@
 
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -41,8 +40,6 @@ import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.co
     DoctorFormComponent,
 
     DoctorFormComponent,
-
-
     LoginComponent,
     RegisterPageComponent,
     SettingsPageComponent,
