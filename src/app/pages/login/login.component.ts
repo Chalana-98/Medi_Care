@@ -47,30 +47,30 @@ export class LoginComponent implements OnInit {
       this.showValidationError();
     }
   }
-  onSwitchChange(event: any) {
-    this.loginUser.userType = event.target.checked ? 'doctor' : 'patient';
+ 
+
   
-
-  }
-
   private performLogin() {
     this.http.post('https://localhost:7212/api/User/LogIn', this.loginUser)
       .subscribe(
         (response: any) => {
-          alert('Login successful!');
-          console.log('Login successful:', response);
-          this.loginForm.resetForm();
-          if (this.loginUser.userType == 'patient') {
-
-            this.router.navigate(['./patient_dashboard']); 
-          }
-          else if (this.loginUser.userType == 'doctor') {
-            this.router.navigate(['./doctor_dashboard']); 
-          }
-          else{
-            alert('Error during Login.cheak user type');
-          }
           
+          if (response && response.userType) {
+            alert('Login successful!');
+            console.log('Login successful:', response);
+            this.loginForm.resetForm();
+  
+            // Use the userType to determine the route
+            if (response.userType === 'patient') {
+              this.router.navigate(['./patient_dashboard']);
+            } else if (response.userType === 'doctor') {
+              this.router.navigate(['./doctor_dashboard']);
+            } else {
+              alert('Error during Login. Invalid user type');
+            }
+          } else {
+            alert('Error during Login. User type not provided in the response.');
+          }
         },
         (error: any) => {
           alert('Error during Login. Please try again.');
@@ -79,6 +79,7 @@ export class LoginComponent implements OnInit {
         }
       );
   }
+  
   
 
   private showValidationError() {
