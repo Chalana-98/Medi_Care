@@ -1,0 +1,8 @@
+.row flex-nowrap{
+    width: 10%;
+}
+
+.custom-btn:hover {
+    background-color: #222A6A; /* Change to the desired hover color */
+    color: #ffffff; /* Change to the desired text color */
+}
