@@ -31,9 +31,19 @@ h1{
   margin-top: auto;
 }
 
+article .post-img img.img-fluid {
+  width: 500px;
+  height: 250px;
+}
+
+
 article{
  padding: auto;
 
+}
+article .title a{
+  font-family:sans-serif;
+  text-decoration: none;
 }
 
 article .col-xl-3 {
@@ -83,6 +93,12 @@ padding-left: 5px;
 #about .content p:last-child {
   margin-bottom: 0;
 }
+
+#about .container img.img-fluid{
+  height: 250px;
+  width: 500px;
+}
+
 .center {
   text-align: center;
   padding: 50px;

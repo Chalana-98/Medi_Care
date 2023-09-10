@@ -8,12 +8,16 @@
 
 
   .content {
-    background-image: url("/assets/imgba.png"); /* Replace with the path to your background image */
-    background-size: cover; /* Adjust the background size to cover the container */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
-    background-position: center; /* Center the background image */
-    padding-top: 50px; /* Add any necessary padding */
+    background-image: url("/assets/imgba.png"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    padding-top: 50px; 
 }
+    .row .col-background img.img-fluid{
+        width: 592px;
+        height: 400px;
+    }
 
   
 .btn{
@@ -29,7 +33,9 @@
     
 
 }
-
+.calcu{
+    padding-top: 70px;
+}
 
 
 #dropdownMenuButton1{
@@ -57,8 +63,8 @@
 }
 
 .img-fluid{
-    width: 592px;
-    height: auto;
+    width: 700px;
+    height: 500px;
     padding-top: 50px;
 }
 
@@ -82,7 +88,7 @@ h1{
     text-decoration-color: #070815;
     
 }
-.text {
+.matric .text {
     font-size: 16px; /* Set your desired font size */
     text-align: center; /* Center the text horizontally */
     margin-left: 60px;
@@ -91,10 +97,14 @@ h1{
 
 @media screen and (max-width: 768px) {
     .rec177{
-        width: 80vw;
+        width: auto;
 
     }
-
+    .matric .text {
+        font-size: 16px;
+        text-align: auto; 
+        margin-left: 100px;
+    }
 
 }
 
@@ -117,15 +127,6 @@ h1{
 }
 
 
-
-@media screen and (max-width: 768px) {
-    .rec177 {
-        width: 80vw;
-        max-width: 100%; /* Ensure the container doesn't exceed the screen width */
-        padding-left: 20px; /* Adjust padding as needed */
-        padding-right: 20px; /* Adjust padding as needed */
-    }
-}
 
 
 .header{
@@ -153,14 +154,24 @@ h1{
  
 
 @media screen and (max-width: 600px) {
-    .text {
-        font-size: 14px; /* Adjust font size for smaller screens */
+    .matric .text {
+        font-size: 16px;
+        text-align: auto; 
+        margin-left: 250px;
+    }
+    .rec177{
+        width: auto;
     }
 }
 
-@media screen and (min-width: 1200px) {
-    .text {
-        font-size: 18px; /* Adjust font size for larger screens */
+@media screen and (max-width: 1200px) {
+    .matric .text {
+        font-size: 16px;
+        text-align: auto; 
+        margin-left: 170px;
+    }
+    .rec177{
+        width: auto;
     }
 }
 
