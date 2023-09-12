@@ -6,3 +6,12 @@
     background-color: #222A6A; /* Change to the desired hover color */
     color: #ffffff; /* Change to the desired text color */
 }
+
+.demo-section{
+    width: 10%;
+}
+
+#add{
+    margin-top: 20px;
+    background-color: #307BB8;
+}

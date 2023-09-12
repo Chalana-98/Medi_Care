@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MyMaterialModule} from "./material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DoctorFormComponent } from './doctor-form/doctor-form.component';
+import { DoctorFormComponent } from './doctor-dashboard/doctor-form/doctor-form.component';
 
 import {MatMenuModule} from "@angular/material/menu";
 import { LoginComponent } from './pages/login/login.component';
@@ -28,6 +28,7 @@ import { PatientRightcardComponent } from './widget/patient-rightcard/patient-ri
 import { CalenderPageComponent } from './widget/calender-page/calender-page.component';
 import { EventcardComponent } from './eventcard/eventcard.component';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -56,6 +57,7 @@ import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.co
     EventcardComponent,
     DoctorDashboardComponent,
     
+    
 
   ],
 
@@ -70,6 +72,7 @@ import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.co
     MatSlideToggleModule,
     FormsModule,
     HttpClientModule,
+    MatDialogModule,
       
 ],
   providers: [],

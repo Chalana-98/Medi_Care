@@ -2,10 +2,15 @@
     max-width: 80%;
 }
 
-.container{
-  width: 80;
+.row{
+  
 }
 
+.popup{
+  width: 80%;
+  height: 80%;
+  
+}
 .toolbar {
     position: absolute;
     top: 0;
@@ -62,7 +67,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
+.col-sm-4{
+  #form-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+  }
+}
   h1,
   h3,
   h4,
@@ -80,6 +92,8 @@
   }
 
   footer {
+    position: absolute;
+    /* display: flex; */
     margin-top: 8px;
     left: 0;
     right: 0;
@@ -98,10 +112,25 @@
   }
 
   .img-fluid{
-    height: 80%;
+    height: auto;
+    width: 100%;
+    margin: 30px auto; /* Set margin to 'auto' */
+    display: block; /* Ensures that margin:auto works */
   }
 
   /* Responsive Styles */
+  @media (max-width: 768px) {
+    .row{
+      display: flex;
+      flex-direction: column;
+    }
+    .col {
+      flex: 1;
+      min-height: 100px; /* Set a minimum height if needed */
+      margin: 10px; /* Add some spacing between items */
+    }
+  }
+  
   @media screen and (max-width: 767px) {
     
 

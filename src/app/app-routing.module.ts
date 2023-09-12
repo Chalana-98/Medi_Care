@@ -9,7 +9,7 @@ import {MatrixPageComponent} from "./pages/matrix-page/matrix-page.component";
 import {AppComponent} from "./app.component";
 import {StatusPageComponent} from "./pages/status-page/status-page.component";
 import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
-import { DoctorFormComponent } from './doctor-form/doctor-form.component';
+import { DoctorFormComponent } from './doctor-dashboard/doctor-form/doctor-form.component';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 
 

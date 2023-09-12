@@ -1,3 +1,4 @@
+<div class="popup">
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
     <img
@@ -19,7 +20,7 @@
     <!--form content-->
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-sm-8">
           <div class="container-sm">
             <form class="row g-3">
                 <div class="col-md-6">
@@ -53,17 +54,17 @@
                     <input class="form-check-input" type="checkbox" id="gridCheck">
                     <label class="form-check-label" for="gridCheck">
                       Check me out
-                      
                     </label>
                   </div>
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary m-2">Save</button>
+                  <button class="btn btn-primary m-2" (click)="onNoClick()">Close</button>
                 </div>
             </form>
           </div>
         </div>
-        <div class="col">
+        <div class="col-sm-4" id="form-img">
           <img src="\assets\doctorForm.png" class="img-fluid" alt="Patient's Record">
         </div>
       </div>
@@ -75,6 +76,6 @@
     <footer>
       <!-- <div role="banner"></div> -->
     </footer>
-  
-  <router-outlet></router-outlet>
+  </div>
+  <!-- <router-outlet></router-outlet> -->
   
