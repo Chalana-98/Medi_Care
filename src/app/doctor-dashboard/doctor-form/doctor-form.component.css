@@ -90,7 +90,14 @@
   .spacer {
     flex: 1;
   }
-
+  .custom-btn{
+    background-color: #D2E9E9;
+    color: #0D1028;
+  }
+  .custom-btn:hover {
+      background-color: #222A6A; /* Change to the desired hover color */
+      color: #ffffff; /* Change to the desired text color */
+  }
   footer {
     position: absolute;
     /* display: flex; */

@@ -1,7 +1,10 @@
 .row flex-nowrap{
     width: 10%;
 }
-
+.custom-btn{
+    background-color: #D2E9E9;
+    color: #0D1028;
+}
 .custom-btn:hover {
     background-color: #222A6A; /* Change to the desired hover color */
     color: #ffffff; /* Change to the desired text color */
@@ -13,5 +16,6 @@
 
 #add{
     margin-top: 20px;
-    background-color: #307BB8;
+    background-color: #0D1028;
+    color: #D2E9E9;
 }
