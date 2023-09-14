@@ -3,10 +3,11 @@
 
     <!-- side nav -->
     <div class="row flex-nowrap">
-      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" id="navbarVertical">
         <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
           <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-black text-decoration-none">
-            <img src="assets/logo1-01.png" width="160" height="100" style="margin-top: 20px;">
+            <img src="assets/logo1-01.png" width="120" height="75" style="margin-top: 20px;">
+            <!-- <img src="assets/logo1-01.png" id="logo"> -->
           </a>
           <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-black"
             id="menu">
@@ -145,77 +146,9 @@
   
   
   
-        <!-- Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid justify-content-between">
-            <!-- Left elements -->
-            <div class="d-flex">
-              <!-- Brand -->
-  
-  
-              <!-- Search form -->
-              <form class="input-group w-auto my-auto d-none d-sm-flex">
-                <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search"
-                  style="min-width: 25px; width: 30vw;" />
-                <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search"></i></span>
-              </form>
-            </div>
-            <!-- Left elements -->
-  
-  
-  
-            <div class="demo-section" style="margin-left: 38%;">
-              <!-- Mat Icon with Badge -->
-  
-              <mat-icon matBadge="15" matBadgeColor="warn" [matMenuTriggerFor]="menu"
-                style="font-size: 30px;">notifications</mat-icon>
-  
-              <!-- Dropdown Menu -->
-              <mat-menu #menu="matMenu">
-                <!-- Logout Option -->
-                <button mat-menu-item>Logout</button>
-  
-                <!-- Settings Option -->
-                <button mat-menu-item>Settings</button>
-              </mat-menu>
-  
-              <!-- Include text description of the icon's meaning for screen-readers -->
-              <span class="cdk-visually-hidden">
-                Home Icon
-              </span>
-            </div>
-  
-  
-            <!-- Right elements -->
-  
-  
-  
-  
-  
-            <ul class="navbar-nav flex-row">
-              <li class="nav-item dropdown" style="margin-right: 7vw;">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  <img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" class="rounded-circle" height="40"
-                    alt="Black and White Portrait of a Man" loading="lazy" />
-  
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li><a class="dropdown-item" href="#">Logout</a></li>
-                </ul>
-              </li>
-  
-  
-  
-  
-  
-            </ul>
-            <!-- Right elements -->
-          </div>
-        </nav>
-        <!-- Navbar -->
+        <!-- Navbar Horizantal-->
+        
+        <!-- /Navbar Horizantal -->
         <br>
   
   
@@ -238,7 +171,7 @@
               <th scope="row">1</th>
               <td>Medical Report</td>
               <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
+              <td><button type="button" class="btn btn-sm btn-outline col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
               <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
             </tr>
             <tr>

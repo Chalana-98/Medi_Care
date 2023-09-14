@@ -1,12 +1,15 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DoctorFormComponent } from './doctor-form/doctor-form.component';
-
-
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 @Component({
   selector: 'app-doctor-dashboard',
   templateUrl: './doctor-dashboard.component.html',
-  styleUrls: ['./doctor-dashboard.component.css']
+  styleUrls: ['./doctor-dashboard.component.css'],
+  // standalone: true,
+  // imports: [MatButtonModule, MatMenuModule, MatIconModule],
 })
 export class DoctorDashboardComponent{
   constructor(public dialog: MatDialog) {}

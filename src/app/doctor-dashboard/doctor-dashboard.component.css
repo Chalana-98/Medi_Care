@@ -2,8 +2,9 @@
     width: 10%;
 }
 .custom-btn{
-    background-color: #D2E9E9;
+    /* background-color: #D2E9E9; */
     color: #0D1028;
+    border-color: #222A6A;
 }
 .custom-btn:hover {
     background-color: #222A6A; /* Change to the desired hover color */
@@ -18,4 +19,38 @@
     margin-top: 20px;
     background-color: #0D1028;
     color: #D2E9E9;
+}
+/* #navbarVertical{
+    background-color: #D2E9E9;
+    width: fit-content;
+} */
+#navbarVertical{
+    background-color: #D2E9E9;
+    width: fit-content;
+}
+#navbarHorizantal{
+    background-color: #D2E9E9;
+}
+#right{
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* For horizontal centering */
+    align-items: center; /* For vertical centering */
+}
+
+@media screen and (max-width: 600px) {
+  #navbarHorizantal #search {
+    float: none;
+  }
+  #navbarHorizantal a, #navbarHorizantal input[type=text], #navbarHorizantal #search button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  #navbarHorizantal input[type=text] {
+    border: 1px solid #ccc;  
+  }
 }
