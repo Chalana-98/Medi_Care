@@ -57,8 +57,9 @@
   </div>
 </div>
 
+<div class="chart"> 
 <form class="row gx-3 gy-2 align-items-center">
-  <div class="col-auto">
+  <div class="col-sm-auto">
     <div class="form-check">
       <label class="form-check-label" >
         You are
@@ -67,9 +68,9 @@
   </div>
   <div class="col-sm-1">
     <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specificSizeInputName" >
+    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Age">
   </div>
-  <div class="col-auto">
+  <div class="col-sm-auto">
     <div class="form-check">
       <label class="form-check-label" >
         Years Old
@@ -78,9 +79,9 @@
   </div>
   <div class="col-sm-1">
     <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specificAge" >
+    <input type="text" class="form-control" id="specificAge" placeholder="Gender">
   </div>
-  <div class="col-auto">
+  <div class="col-sm-auto">
     <div class="form-check">
       <label class="form-check-label" >
         Who is
@@ -89,9 +90,9 @@
   </div>
   <div class="col-sm-1">
     <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specifcGender" >
+    <input type="text" class="form-control" id="specifcGender" placeholder="Height" >
   </div>
-  <div class="col-auto">
+  <div class="col-sm-auto">
     <div class="form-check">
       <label class="form-check-label" >
         cm tall and weights
@@ -100,9 +101,9 @@
   </div>
   <div class="col-sm-1">
     <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specificSize" >
+    <input type="text" class="form-control" id="specificSize" placeholder="Weight">
   </div>
-  <div class="col-auto">
+  <div class="col-sm-auto">
     <div class="form-check">
       <label class="form-check-label" >
         kg while being
@@ -110,16 +111,18 @@
     </div>
   </div>
   <div class="col-sm-1">
-    <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specificwheight" >
+    <label class="visually-hidden" for="specificSizeInputName">Name
+    <input type="text" class="form-control" id="specificwheight" placeholder="Sedentary" >
+    </label>
   </div>
+  
   <div class="col-sm-2">
     <button type="submit" class="btn btn-primary">Re Calculate</button>
   </div>
 
 </form>
 
-
+</div>
 <div class="container mt-5">
   <div class="row">
     <!-- First Column -->
@@ -138,26 +141,38 @@
       <!-- Paragraph -->
       <p>Based on your stats, the best estimate for your maintenance calories is 1,508 calories per day based on the Mifflin-St Jeor Formula, which is widely known to be the most accurate. The table below shows the difference if you were to have selected a different activity level.</p>
       <!-- Table -->
-      <table class="table table-bordered">
-        <thead>
-        <tr>
-          <th>Column 1</th>
-          <th>Column 2</th>
-        </tr>
-        </thead>
+      <div class="detailtable">
+      <table class="table">
         <tbody>
         <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
+          <td>Basal Metabolic Rate</td>
+          <td> 1,257 calories per day</td>
         </tr>
         <tr>
-          <td>Data 3</td>
-          <td>Data 4</td>
+          <td>Sedentary</td>
+          <td> 1,508  calories per day</td>
+        </tr>
+        <tr>
+          <td>Light Exercise </td>
+          <td> 1,728 calories per day </td>
+        </tr>
+        <tr>
+          <td>Moderate Exercise </td>
+          <td> 1,948 calories per day</td>
+        </tr>
+        <tr>
+          <td>Heavy Exercise</td>
+          <td> 2,167 calories per day </td>
+        </tr>
+        <tr>
+          <td>Athlete</td>
+          <td> 2,387 calories per day </td>
         </tr>
         </tbody>
       </table>
     </div>
   </div>
+</div>
 </div>
 
 <!-- Second row -->
@@ -178,29 +193,34 @@
     </div>
 
     <!-- Second Column -->
+    
     <div class="col-md-6">
       <!-- Paragraph -->
-      <p>This is a paragraph in the second column.</p>
+      <p>Your BMI is 24.0, which means you are classified as Normal Weight…</p>
       <!-- Table -->
+      <div class="secotable">
       <table class="table table-bordered">
-        <thead>
+         <tbody>
+          <tr>
+            <td>18.5 or less</td>
+            <td>Underweight</td>
+          </tr>
         <tr>
-          <th>Column 1</th>
-          <th>Column 2</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Data 1</td>
-          <td>Data 2</td>
+          <td>18.5 - 24.99 </td>
+          <td>Normal Weight </td>
         </tr>
         <tr>
-          <td>Data 3</td>
-          <td>Data 4</td>
+          <td>25 - 29.99 </td>
+          <td>Overweight</td>
+        </tr>
+        <tr>
+          <td>30+    </td>
+          <td>Obese</td>
         </tr>
         </tbody>
       </table>
     </div>
+  </div>
   </div>
 </div>
 
@@ -214,11 +234,11 @@
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
       <!-- Logo on the left -->
-      <img src="assets/logo1-01.png" alt="Logo" width="150" height="80">
+      <img src="assets/logonav.png" alt="Logo" width="200" height="80">
 
       <!-- Contact details on the right -->
       <div class="contact-details">
-        <p>Contact: contact@example.com</p>
+        <p>Contact: medicare@gmail.com</p>
         <p>Phone: (123) 456-7890</p>
       </div>
       
@@ -232,7 +252,7 @@
     
     <div class="row mt-4">
       <div class="col text-center">
-        &copy; 2023 Your Company. All rights reserved.
+        &copy; 2023 Medi Care. All rights reserved.
       </div>
     </div>
   </div>
