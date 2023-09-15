@@ -5,3 +5,65 @@
     height: 12vw;
 }
 
+.card {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-body {
+  background: rgb(70, 64, 184);
+  background: linear-gradient(90deg, rgba(70, 64, 184, 1) 0%, rgba(59, 59, 203, 0.9226540958180147) 61%, rgba(98, 245, 176, 0.8666316868544293) 100%);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-fluid {
+    display: none;
+  
+  }
+}
+
+@media (max-width: 992px) {
+  .col-lg-2 {
+    display: none;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .card-body {
+    min-height: 150px; /* Adjust this value as needed for medium screens */
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    min-height: 200px; /* Adjust this value as needed for small screens */
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+   gap: 50px; /* Adjust this value as needed for small screens */
+    margin-bottom: 150px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .card {
+   gap: 50px; /* Adjust this value as needed for small screens */
+    margin-bottom: 150px;
+  }
+}
+
