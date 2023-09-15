@@ -26,4 +26,6 @@ export class DoctorDashboardComponent{
       console.log('The dialog was closed', result);
     });
   }
+
+  
 }

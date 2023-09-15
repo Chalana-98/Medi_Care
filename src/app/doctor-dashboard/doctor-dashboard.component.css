@@ -1,8 +1,10 @@
+table{
+    color: #0D1028;
+}
 .row flex-nowrap{
     width: 10%;
 }
 .custom-btn{
-    /* background-color: #D2E9E9; */
     color: #0D1028;
     border-color: #222A6A;
 }
@@ -10,32 +12,36 @@
     background-color: #222A6A; /* Change to the desired hover color */
     color: #ffffff; /* Change to the desired text color */
 }
-
 .demo-section{
     width: 10%;
 }
-
 #add{
     margin-top: 20px;
     background-color: #0D1028;
     color: #D2E9E9;
 }
-/* #navbarVertical{
-    background-color: #D2E9E9;
-    width: fit-content;
-} */
 #navbarVertical{
     background-color: #D2E9E9;
     width: fit-content;
+    color: #0D1028;
 }
 #navbarHorizantal{
     background-color: #D2E9E9;
+    color: #0D1028;
+    border-radius: 25px;
 }
 #right{
     padding: 10px;
     display: flex;
     justify-content: center; /* For horizontal centering */
     align-items: center; /* For vertical centering */
+}
+.nav-link{
+    color: #515365;
+}
+.nav-link.active, .nav-link:focus, .nav-link:hover {
+    color: #222A6A;
+    border: 2px solid #222A6A;
 }
 
 @media screen and (max-width: 600px) {

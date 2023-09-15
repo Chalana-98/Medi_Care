@@ -7,18 +7,14 @@
         <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
           <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-black text-decoration-none">
             <img src="assets/logo1-01.png" width="120" height="75" style="margin-top: 20px;">
-            <!-- <img src="assets/logo1-01.png" id="logo"> -->
           </a>
-          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-black"
-            id="menu">
+          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-black" id="menu">
             <li class="nav-item" style="margin-top: 20px;">
               <a href="#" class="nav-link align-middle px-0">
                 <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">OverView</span>
               </a>
             </li>
-            <br>
-  
-  
+            <br>  
             <li>
               <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
@@ -95,7 +91,7 @@
                 </svg> <span class="ms-1 d-none d-sm-inline">Settings</span> </a>
             </li>
             <li>
-              <button type="button" class="btn btn-info col-16" id="add" (click)="openDialog()">Add + </button>
+              <button type="button" class="btn btn-info col-16" id="add" (click)="openDialog()" style="transform: scale(1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">Add + </button>
             </li>
   
           </ul>
@@ -105,23 +101,7 @@
       </div>
       <div class="col py-3">
   
-        <!-- try -->
-        <style>
-          /* Default styles for the icon and text */
-          .nav-link {
-            color: rgb(74, 74, 74) !important;
-            /* !important to override the default Bootstrap styles */
-          }
-  
-          /* Styles for the icon and text when active/clicked */
-          .nav-link.active,
-          .nav-link:focus,
-          .nav-link:hover {
-            color: rgb(9, 41, 185) !important;
-            /* !important to override the default Bootstrap styles */
-          }
-        </style>
-  
+          
         <script>
           document.addEventListener("DOMContentLoaded", function () {
             var navLinks = document.querySelectorAll(".nav-link");
@@ -136,20 +116,39 @@
             });
           });
         </script>
-  
-        <!-- try -->
-  
-  
-        <!-- side nav -->
-  
-  
-  
-  
-  
+
         <!-- Navbar Horizantal-->
-        
+        <nav class="navbar" id="navbarHorizantal">
+          <div class="container-fluid">
+            <form class="d-flex" role="search" id="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search"></i></span>
+            </form>
+            <div id="navRight">
+              <div class="container text-center">
+                <div class="row" id="right">
+                  <div class="col" id="notIcon">
+                    <mat-icon matBadge="15" matBadgeColor="warn" style="font-size: 30px;" id="notIcon">notifications</mat-icon>
+                  </div>
+                  <div class="col">
+                    <div class="dropdown">
+                      <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="\assets\avatardoc.png" class="rounded-circle" height="50"
+                          alt="Black and White Portrait of a Man" loading="lazy" />
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="src\app\pages\login">Logout</a></li>
+                        <li><a class="dropdown-item" href="#">Add New</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </nav>
         <!-- /Navbar Horizantal -->
-        <br>
   
   
         <!-- content table -->
@@ -241,7 +240,7 @@
         </table>
       </div>
          
-        <!-- content table -->
+        <!-- /content table -->
   
       </div>
     </div>
