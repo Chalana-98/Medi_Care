@@ -70,11 +70,11 @@
           </div>
 
           <div class="col-3">
-          <input type="radio" id="male" name="gender"  value="male">
-          <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" [(ngModel)]="gender">
+            <label for="male">Male</label>
          </div>
         <div class="col-3">
-          <input type="radio" id="female" name="gender" value="female">
+          <input type="radio" id="female" name="gender" value="female" [(ngModel)]="gender">
           <label for="female">Female</label>
        </div>
         </div>
@@ -83,22 +83,21 @@
           <div class="col-5"> <label for="inputAge" class="col-sm-4 col-form-label">Age</label></div>
 
           <div class="col-3">
-            <input type="age" class="form-control" id="inputAge">
+            <input type="number" [(ngModel)]="age" class="form-control" id="inputAge" placeholder="Age">
           </div>
         </div>
 
+       
         <div class="row mb-3">
-
           <div class="col-5"><label for="inputWeight" class="col-sm-4 col-form-label">Weight</label></div>
-
           <div class="col-3">
-            <input type="weight" class="form-control" id="inputWeight" placeholder="kg">
+            <input type="number" [(ngModel)]="weight" class="form-control" id="inputWeight" placeholder="kg">
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-5"><label for="inputHeight" class="col-sm-4 col-form-label">Height</label></div>
           <div class="col-3">
-            <input type="height" class="form-control" id="inputHeight" placeholder="cm" >
+            <input type="number" [(ngModel)]="height" class="form-control" id="inputHeight" placeholder="cm">
           </div>
         </div>
         <div class="row mb-3">
@@ -106,13 +105,14 @@
           <div class="col-6">
             <div class="dropdown">
               <button class="btn dropdown-toggle form-control" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Sedentary(Office Job)V
-              </button>
+                Activity {{ activity }} 
+              </button>              
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Light Exercise</a></li>
-                <li><a class="dropdown-item" href="#">Moderate Exercise</a></li>
-                <li><a class="dropdown-item" href="#">Heavy Exercise</a></li>
-                <li><a class="dropdown-item" href="#">Athlete</a></li>
+                <li><a class="dropdown-item" (click)="updateActivity('Sedentary(Office Job)V',0)">Sedentary(Office Job)V</a></li>
+                <li><a class="dropdown-item" (click)="updateActivity('Light Exercise',1)">Light Exercise</a></li>
+                <li><a class="dropdown-item" (click)="updateActivity('Moderate Exercise',2)">Moderate Exercise</a></li>
+                <li><a class="dropdown-item" (click)="updateActivity('Heavy Exercise',3)">Heavy Exercise</a></li>
+                <li><a class="dropdown-item" (click)="updateActivity('Athlete',4)">Athlete</a></li>
               </ul>
             </div>
           </div>
@@ -121,8 +121,8 @@
             <div class="col-5">
               <label for="inputBodyFat" class="col-sm-6 col-form-label">Body Fat</label>
             </div>
-            <div class="col-3">
-              <input type="BodyFat" id="inputBodyFat" class="col-sm-6 form-control" placeholder="15" aria-describedby="bodyfat">
+            <div class="col-4">
+              <input type="number" [(ngModel)]="bodyFat" class="form-control" id="inputHeight" placeholder="optional">
             </div>
             <div class="col-auto col-md-2">
               <span id="bodyfat" class="form-text" >
@@ -135,14 +135,13 @@
         </div>
    
 
-    
-    
-
-  <div class="calcu">
-    <div class="mx-auto d-block text-center">
-      <button class="btn " type="button"  routerLink="/status_page">Calculate</button>
-    </div>
-  </div>
+    <div class="CalBMI">
+        <div class="row mb-3">
+          <div class="col-12">
+            <button class="btn" type="button" (click)="calculateBMI()">Calculate</button>
+          </div>
+        </div>
+      </div>
     
 
 
@@ -188,4 +187,4 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> 

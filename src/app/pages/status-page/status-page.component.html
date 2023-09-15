@@ -60,6 +60,7 @@
 <div class="chart"> 
 <form class="row gx-3 gy-2 align-items-center">
   <div class="col-sm-auto">
+
     <div class="form-check">
       <label class="form-check-label" >
         You are
@@ -67,8 +68,9 @@
     </div>
   </div>
   <div class="col-sm-1">
-    <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Age">
+     
+    <input type="text" class="form-control" id="specificaeight" [placeholder]="age">
+    
   </div>
   <div class="col-sm-auto">
     <div class="form-check">
@@ -78,8 +80,9 @@
     </div>
   </div>
   <div class="col-sm-1">
-    <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specificAge" placeholder="Gender">
+    
+    <input type="text" class="form-control" id="specificwheight" [placeholder]="gender === 'male' ? 'Male' : 'Female'">
+    
   </div>
   <div class="col-sm-auto">
     <div class="form-check">
@@ -88,9 +91,8 @@
       </label>
     </div>
   </div>
-  <div class="col-sm-1">
-    <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specifcGender" placeholder="Height" >
+  <div class="col-sm-1">  
+    <input type="text" class="form-control" id="specificheight" [placeholder]="height">
   </div>
   <div class="col-sm-auto">
     <div class="form-check">
@@ -99,10 +101,9 @@
       </label>
     </div>
   </div>
-  <div class="col-sm-1">
-    <label class="visually-hidden" for="specificSizeInputName">Name</label>
-    <input type="text" class="form-control" id="specificSize" placeholder="Weight">
-  </div>
+  <div class="col-sm-1">  
+    <input type="text" class="form-control" id="specificwweight" [placeholder]="weight">
+    </div>
   <div class="col-sm-auto">
     <div class="form-check">
       <label class="form-check-label" >
@@ -110,14 +111,15 @@
       </label>
     </div>
   </div>
-  <div class="col-sm-1">
-    <label class="visually-hidden" for="specificSizeInputName">Name
-    <input type="text" class="form-control" id="specificwheight" placeholder="Sedentary" >
-    </label>
+  <div class="col-1">
+    
+    <input type="text" class="form-control" id="specificwheight" [placeholder]="activity">
   </div>
+  
   
   <div class="col-sm-2">
     <button type="submit" class="btn btn-primary">Re Calculate</button>
+
   </div>
 
 </form>
@@ -139,7 +141,7 @@
     <!-- Second Column -->
     <div class="col-md-6">
       <!-- Paragraph -->
-      <p>Based on your stats, the best estimate for your maintenance calories is 1,508 calories per day based on the Mifflin-St Jeor Formula, which is widely known to be the most accurate. The table below shows the difference if you were to have selected a different activity level.</p>
+      <p>Based on your stats, the best estimate for your maintenance calories is <b>{{ tdee | number: '1.0-0'}}</b> calories per day based on the Mifflin-St Jeor Formula, which is widely known to be the most accurate. The table below shows the difference if you were to have selected a different activity level.</p>
       <!-- Table -->
       <div class="detailtable">
       <table class="table">
@@ -196,7 +198,9 @@
     
     <div class="col-md-6">
       <!-- Paragraph -->
-      <p>Your BMI is 24.0, which means you are classified as Normal Weight…</p>
+      <p>Your BMI is <b>{{  bmi | number: '1.1-1'  }}</b> which represents your Basal Metabolic Rate...</p>
+
+
       <!-- Table -->
       <div class="secotable">
       <table class="table table-bordered">
@@ -220,10 +224,10 @@
         </tbody>
       </table>
     </div>
-    <br>
   </div>
   </div>
 </div>
+
 
 
 

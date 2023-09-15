@@ -30,9 +30,12 @@
     margin-right: auto;
     margin-bottom: 5vw;
     border-radius: 18px;
-    
-
 }
+.CalBMI{
+    padding-left: 250px;
+    padding-top: 20px;
+}
+
 .calcu{
     padding-top: 70px;
 }
