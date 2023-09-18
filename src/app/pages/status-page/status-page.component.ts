@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-status-page',
@@ -19,9 +21,13 @@ export class StatusPageComponent implements OnInit {
   updatedBMI: number = 0;
   bmr: number = 0;
   isMetric: boolean = true;
+  idealWeight: string = '';
+  bmiScore: number = 0;
+  bmiClassification: string = '';
+  bmiCategory: string = '';
 
 
-  constructor(private route: ActivatedRoute, private cd: ChangeDetectorRef) {}
+  constructor(private route: ActivatedRoute, private cd: ChangeDetectorRef, private router: Router) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
@@ -32,19 +38,24 @@ export class StatusPageComponent implements OnInit {
       this.gender = params['gender'];
       this.activity = params['activity'];
       this.bodyFat = params['bodyFat'];
+      this.calculateBMR();
       this.calculateTDEE();
+      this.calculateIdealWeightAndBMI(this.height, this.weight);
+      
     });
+  }
+  calculateBMR() {
+    if (this.gender === 'male') {
+      this.bmr = 88.362 + 13.397 * this.weight + 4.799 * this.height - 5.677 * this.age;
+    } else if (this.gender === 'female') {
+      this.bmr = 447.593 + 9.247 * this.weight + 3.098 * this.height - 4.330 * this.age;
+    }
+    this.calculateTDEE();
   }
 
   calculateTDEE() {
     // Calculate BMR using Mifflin-St Jeor Equation
-    let bmr = 0;
-
-    if (this.gender === 'male') {
-      bmr = 88.362 + 13.397 * this.weight + 4.799 * this.height - 5.677 * this.age;
-    } else if (this.gender === 'female') {
-      bmr = 447.593 + 9.247 * this.weight + 3.098 * this.height - 4.330 * this.age;
-    }
+  
 
     // Calculate TDEE based on activity level
     let tdeeFactor = 0;
@@ -71,12 +82,51 @@ export class StatusPageComponent implements OnInit {
     if (this.bodyFat > 0) {
       const leanMassPercentage = 100 - this.bodyFat;
       const leanMassFactor = leanMassPercentage / 100;
-      bmr *= leanMassFactor;
+      this.bmr *= leanMassFactor;
     }
 
     // Calculate TDEE
-    this.tdee = bmr * tdeeFactor;
+    this.tdee = this.bmr * tdeeFactor;
 
     this.cd.detectChanges();
   }
+  calculateIdealWeightAndBMI(height: number, weight: number) {
+    const lowerRange = (height - 100) * 0.9;
+    const upperRange = (height - 100) * 1.1;
+  
+    this.idealWeight = `${lowerRange.toFixed(1)} - ${upperRange.toFixed(1)} kg`;
+  
+    const bmi = (weight / ((height / 100) * (height / 100))).toFixed(1);
+    this.bmiScore = parseFloat(bmi);
+  
+    if (this.bmiScore < 18.5) {
+      this.bmiClassification = 'Underweight';
+    } else if (this.bmiScore < 25) {
+      this.bmiClassification = 'Normal Weight';
+    } else if (this.bmiScore < 30) {
+      this.bmiClassification = 'Overweight';
+    } else {
+      this.bmiClassification = 'Obese';
+    }
+    this.determineBMICategory();
+  }
+  
+  determineBMICategory() {
+    if (this.bmi < 18.5) {
+      this.bmiCategory = 'Underweight';
+    } else if (this.bmi >= 18.5 && this.bmi <= 24.99) {
+      this.bmiCategory = 'Normal Weight';
+    } else if (this.bmi >= 25 && this.bmi <= 29.99) {
+      this.bmiCategory = 'Overweight';
+    } else {
+      this.bmiCategory = 'Obese';
+    }
+  }
+  navigateToMatrixPage() {
+    // Navigate back to the "matrix-page"
+    this.router.navigate(['/matrix_page']);
+  
+    // Note: You can pass any additional queryParams or other navigation options as needed.
+  }
+  
 }

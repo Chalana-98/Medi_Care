@@ -116,59 +116,61 @@
     <input type="text" class="form-control" id="specificwheight" [placeholder]="activity">
   </div>
   
-  
   <div class="col-sm-2">
-    <button type="submit" class="btn btn-primary">Re Calculate</button>
-
+    <button type="button" class="btn btn-primary" (click)="navigateToMatrixPage()">Re-Calculate</button>
   </div>
-
+  
 </form>
 
 </div>
+
+
 <div class="container mt-5">
   <div class="row">
     <!-- First Column -->
-    <div class="col-md-6 column-space ">
+    <div class="col-xl-4 column-space ">
       <!-- Card Component -->
+      <p class="card-title">Your Maintaince Calories</p>
       <div class="card custom-card">
         <div class="card-body">
-          <h5 class="card-title">Your Maintaince calories</h5>
-          <p class="card-text">This is the content of the card.</p>
-        </div>
+          <div class="valuee"><p>{{ tdee | number: '1.0-0'}}</p></div>
+          <p>calories per day</p>
+         </div>
+         <div class="card-body">
+          <div class="valuee"><p>{{ tdee*7 | number: '1.0-0'}}</p></div>
+          <p>calories per week</p>
+         </div>
       </div>
     </div>
 
     <!-- Second Column -->
-    <div class="col-md-6">
+    <div class="col-xl-8">
       <!-- Paragraph -->
       <p>Based on your stats, the best estimate for your maintenance calories is <b>{{ tdee | number: '1.0-0'}}</b> calories per day based on the Mifflin-St Jeor Formula, which is widely known to be the most accurate. The table below shows the difference if you were to have selected a different activity level.</p>
       <!-- Table -->
       <div class="detailtable">
       <table class="table">
         <tbody>
-        <tr>
-          <td>Basal Metabolic Rate</td>
-          <td> 1,257 calories per day</td>
-        </tr>
-        <tr>
+
+        <tr [ngClass]="{'highlighted': activity === 'Sedentary(Office Job)V'}">
           <td>Sedentary</td>
-          <td> 1,508  calories per day</td>
+          <td>{{ (bmr * 1.2) | number: '1.0-0' }} calories per day</td>
         </tr>
-        <tr>
+        <tr [ngClass]="{'highlighted': activity === 'Light Exercise'}">
           <td>Light Exercise </td>
-          <td> 1,728 calories per day </td>
+          <td>{{ (bmr * 1.375) | number: '1.0-0' }} calories per day</td>
         </tr>
-        <tr>
+        <tr [ngClass]="{'highlighted': activity === 'Moderate Exercise'}">
           <td>Moderate Exercise </td>
-          <td> 1,948 calories per day</td>
+          <td>{{ (bmr * 1.55) | number: '1.0-0' }} calories per day</td>
         </tr>
-        <tr>
+        <tr [ngClass]="{'highlighted': activity === 'Heavy Exercise'}">
           <td>Heavy Exercise</td>
-          <td> 2,167 calories per day </td>
+          <td>{{ (bmr * 1.725) | number: '1.0-0' }} calories per day</td>
         </tr>
-        <tr>
+        <tr [ngClass]="{'highlighted': activity === 'Athlete'}">
           <td>Athlete</td>
-          <td> 2,387 calories per day </td>
+          <td> {{ (bmr * 1.9) | number: '1.0-0' }} calories per day</td>
         </tr>
         </tbody>
       </table>
@@ -177,60 +179,53 @@
 </div>
 </div>
 
+
+
+
+
 <!-- Second row -->
 
-<div class="container mt-5">
+<div class="container-bmi">
   <div class="row">
-    <!-- First Column -->
     <div class="col-md-6">
       <!-- Form Fields -->
       <div class="form-group">
-        <label for="inputField1">Field 1</label>
-        <input type="text" class="form-control" id="inputField1" placeholder="Enter text for Field 1">
+        <p>Ideal Weight : {{ idealWeight }}</p>
       </div>
-      <div class="form-group">
-        <label for="inputField2">Field 2</label>
-        <input type="text" class="form-control" id="inputField2" placeholder="Enter text for Field 2">
-      </div>
+      <p>Ideal body weight (IBW) is defined as weight for height at the lowest risk of mortality. </p>
+        <p>Your ideal body weight is estimated to be between <b>{{ idealWeight }}</b> </p>
     </div>
-
-    <!-- Second Column -->
-    
     <div class="col-md-6">
-      <!-- Paragraph -->
-      <p>Your BMI is <b>{{  bmi | number: '1.1-1'  }}</b> which represents your Basal Metabolic Rate...</p>
-
-
+      <div class="form-group">
+        <p>BMI Score : {{  bmi | number: '1.1-1'  }}</p>
+      </div>
+      <p> Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. Your BMI is <b>{{  bmi | number: '1.1-1'  }}</b> , which means you are classified as <b> {{ bmiClassification }}</b>.</p>
       <!-- Table -->
       <div class="secotable">
       <table class="table table-bordered">
          <tbody>
-          <tr>
+          <tr [ngClass]="{ 'selected-category': bmiCategory === 'Underweight' }">
             <td>18.5 or less</td>
             <td>Underweight</td>
           </tr>
-        <tr>
+          <tr [ngClass]="{ 'selected-category': bmiCategory === 'Normal Weight' }">
           <td>18.5 - 24.99 </td>
           <td>Normal Weight </td>
         </tr>
-        <tr>
+        <tr [ngClass]="{ 'selected-category': bmiCategory === 'Overweight' }">
           <td>25 - 29.99 </td>
           <td>Overweight</td>
         </tr>
-        <tr>
+        <tr [ngClass]="{ 'selected-category': bmiCategory === 'Obese' }">
           <td>30+    </td>
           <td>Obese</td>
         </tr>
         </tbody>
       </table>
     </div>
+    </div>
+    </div>
   </div>
-  </div>
-</div>
-
-
-
-
 
 
 
