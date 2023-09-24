@@ -52,6 +52,15 @@
   border-color: white;
 }
 
+.form-check-label{
+  font-size: 15px;
+}
+
+.col-xl-8{ 
+  font-size: 14px;
+}
+
+
 
 @media screen and (max-width: 768px) {
  
@@ -145,6 +154,10 @@ h1{
   font-family: sans-serif;
 }
 
+.para
+{
+  font-size: 17px;
+}
 
 
 
