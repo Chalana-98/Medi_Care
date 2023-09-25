@@ -10,23 +10,13 @@
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start text-black"
           id="menu">
           <li class="nav-item" style="margin-top: 20px;">
-            <a href="#" class="nav-link align-middle px-0">
+            <a href="#chart" class="nav-link align-middle px-0">
               <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">OverView</span>
             </a>
           </li>
           <br>
-          <li>
-            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                class="bi bi-clipboard2-check-fill" viewBox="0 0 16 16">
-                <path
-                  d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z" />
-                <path
-                  d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5Zm6.769 6.854-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708Z" />
-              </svg><span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
 
-          </li>
-          <br>
+
           <li>
             <a href="#" class="nav-link px-0 align-middle">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
@@ -37,24 +27,28 @@
           </li>
           <br>
           <li>
-            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+            <a href="#submenu3" onclick="scrollToCard('submenu3')" data-bs-toggle="collapse"
+              class="nav-link px-0 align-middle ">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                 class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
                 <path
                   d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5ZM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1Zm0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z" />
               </svg> <span class="ms-1 d-none d-sm-inline">Appointment</span></a>
+
+            <script>
+              function scrollToTop(id) {
+                var card = document.getElementById(id);
+                window.scrollToTop(0, card.offsetTop);
+              }
+
+            </script>
             <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-              <li class="w-100">
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
-              </li>
+
             </ul>
           </li>
           <br>
           <li>
-            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+            <a href="#" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                 class="bi bi-clipboard-data" viewBox="0 0 16 16">
                 <path
@@ -64,19 +58,9 @@
                 <path
                   d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
               </svg> <span class="ms-1 d-none d-sm-inline">Prescription</span> </a>
-            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-              <li class="w-100">
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
-              </li>
+
+            <ul class="collapse nav flex-column ms-1" data-bs-parent="#menu">
+
             </ul>
           </li>
           <br>
@@ -139,7 +123,7 @@
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="src\app\pages\login">Logout</a></li>
                       <li><a class="dropdown-item" href="#">Add New</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item"  routerLink="/history">Something else here</a></li>
                     </ul>
                   </div>
                 </div>
@@ -216,6 +200,10 @@
             <app-chart></app-chart>
 
           </div>
+
+
+
+
         </div>
 
 
@@ -231,7 +219,7 @@
             <app-calender-page></app-calender-page>
             <br>
             <hr class="my-4" border-top="1px solid black">
-            <app-eventcard></app-eventcard>
+            <app-eventcard id="submenu3"></app-eventcard>
             <br>
 
           </div>

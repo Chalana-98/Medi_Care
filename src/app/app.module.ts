@@ -29,6 +29,8 @@ import { CalenderPageComponent } from './widget/calender-page/calender-page.comp
 import { EventcardComponent } from './eventcard/eventcard.component';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { HistoryComponent } from './history/history.component';
+
 
 
 
@@ -56,6 +58,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     CalenderPageComponent,
     EventcardComponent,
     DoctorDashboardComponent,
+    HistoryComponent,
+
     
     
 

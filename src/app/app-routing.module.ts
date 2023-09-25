@@ -11,6 +11,7 @@ import {StatusPageComponent} from "./pages/status-page/status-page.component";
 import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
 import { DoctorFormComponent } from './doctor-dashboard/doctor-form/doctor-form.component';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
+import { HistoryComponent }  from './history/history.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'status_page', component:StatusPageComponent},
   {path: 'patient_dashboard', component:PatientDashboardComponent},
   {path: 'doctor_form', component:DoctorFormComponent},
-  {path: 'doctor_dashboard', component:DoctorDashboardComponent}
+  {path: 'doctor_dashboard', component:DoctorDashboardComponent},
+  {path: 'history', component:HistoryComponent}
 ];
 
 @NgModule({

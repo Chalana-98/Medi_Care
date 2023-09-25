@@ -18,6 +18,11 @@ export class LoginComponent implements OnInit {
     
   }
 
+  //eye
+
+
+  //eye
+
   @ViewChild('loginForm') loginForm!: NgForm;
 
   loginUser: User = {

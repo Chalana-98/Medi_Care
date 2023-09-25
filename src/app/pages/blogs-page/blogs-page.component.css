@@ -342,7 +342,7 @@ body, .content {
 /* Style the read more button */
 .read-more-button {
   display: block;
-  background: linear-gradient(to right, rgb(0, 123, 255), rgb(154, 197, 244));
+  background: linear-gradient(to right, rgb(0, 123, 255), rgb(42, 22, 225));
   color: #FFFFFF;
   padding: 10px 20px;
   text-decoration: none;
