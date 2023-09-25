@@ -146,8 +146,9 @@
     <!-- Second Column -->
     <div class="col-xl-8">
       <!-- Paragraph -->
-      <p>Based on your stats, the best estimate for your maintenance calories is <b>{{ tdee | number: '1.0-0'}}</b> calories per day based on the Mifflin-St Jeor Formula, which is widely known to be the most accurate. The table below shows the difference if you were to have selected a different activity level.</p>
-      <!-- Table -->
+      <div class="para">
+        <p>Based on your stats, the best estimate for your maintenance calories is <b>{{ tdee | number: '1.0-0'}}</b> calories per day based on the Mifflin-St Jeor Formula, which is widely known to be the most accurate. The table below shows the difference if you were to have selected a different activity level.</p>
+      </div> <!-- Table -->
       <div class="detailtable">
       <table class="table">
         <tbody>
@@ -192,14 +193,18 @@
       <div class="form-group">
         <p>Ideal Weight : {{ idealWeight }}</p>
       </div>
+     <div class="para">
       <p>Ideal body weight (IBW) is defined as weight for height at the lowest risk of mortality. </p>
-        <p>Your ideal body weight is estimated to be between <b>{{ idealWeight }}</b> </p>
+      <p>Your ideal body weight is estimated to be between <b>{{ idealWeight }}</b> </p>
+     </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
         <p>BMI Score : {{  bmi | number: '1.1-1'  }}</p>
       </div>
-      <p> Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. Your BMI is <b>{{  bmi | number: '1.1-1'  }}</b> , which means you are classified as <b> {{ bmiClassification }}</b>.</p>
+      <div class="para">
+        <p> Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. Your BMI is <b>{{  bmi | number: '1.1-1'  }}</b> , which means you are classified as <b> {{ bmiClassification }}</b>.</p>
+      </div>
       <!-- Table -->
       <div class="secotable">
       <table class="table table-bordered">
