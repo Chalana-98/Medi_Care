@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, EventEmitter, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MedicalRecord } from 'src/app/models/MedicalRecord.model';
@@ -11,44 +11,56 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./doctor-form.component.css']
 })
 export class DoctorFormComponent {
-
-  @ViewChild('recordForm') recordForm!: NgForm;
-
   medicalRecord: MedicalRecord = {
-    date: new Date(),
+    medicalRecordDate: new Date(),
     doctorId: 0,
     patientId: 0,
     category: '',
-    description: ''
+    medicalRecordDescription: ''
   };
   file: File | undefined = undefined;
 
-  constructor(private http: HttpClient, public dialogRef: MatDialogRef<DoctorFormComponent>,private router: Router) {}
+  isFormValid: boolean = true;
+
+  @ViewChild('recordForm') recordForm!: NgForm;
+  @Output() dataSaved: EventEmitter<any> = new EventEmitter();
+
+  constructor(private http: HttpClient, public dialogRef: MatDialogRef<DoctorFormComponent>, private router: Router) {}
 
   onNoClick(): void {
     this.dialogRef.close();
   }
 
-  onSubmit(fileInput: any) {
-    const formData = new FormData();
-    formData.append('DoctorId', String(this.medicalRecord.doctorId)); // Ensure correct field names
-    formData.append('PatientId', String(this.medicalRecord.patientId)); // Ensure correct field names
-    formData.append('Category', this.medicalRecord.category);
-    formData.append('Date', this.formatDate(this.medicalRecord.date)); // Ensure date is formatted correctly
-    formData.append('Description', this.medicalRecord.description);
-    formData.append('File', fileInput.files[0]);
+  onSubmit() {
+    if (this.recordForm.valid && this.file) {
+      this.isFormValid = true; 
+      this.saveMedicalRecord();
+    } else {
+      this.isFormValid = false; 
+      this.showValidationError();
+    }
+  }
+  
 
-    this.http.post<any>('https://localhost:7212/api/MedicalRecords', formData)
+  private saveMedicalRecord() {
+    const formData = new FormData();
+    formData.append('DoctorId', String(this.medicalRecord.doctorId));
+    formData.append('PatientId', String(this.medicalRecord.patientId));
+    formData.append('Category', this.medicalRecord.category);
+    formData.append('Date', this.formatDate(this.medicalRecord.medicalRecordDate));
+    formData.append('Description', this.medicalRecord.medicalRecordDescription);
+    formData.append('File', this.file as File);
+
+    this.http.post('https://localhost:7212/api/MedicalRecords', formData, { responseType: 'text' })
       .subscribe(
         (response) => {
           console.log('Response from the server:', response);
-
+          this.dialogRef.close();
+          this.dataSaved.emit();
           this.router.navigate(['./doctor_dashboard']);
         },
         (error) => {
           console.error('Error:', error);
-          this.recordForm.resetForm();
-          
         }
       );
   }
@@ -59,6 +71,7 @@ export class DoctorFormComponent {
       this.file = inputElement.files[0];
     }
   }
+  
 
   private formatDate(date: Date): string {
     const year = date.getFullYear();
@@ -66,4 +79,14 @@ export class DoctorFormComponent {
     const day = ('0' + date.getDate()).slice(-2);
     return `${year}-${month}-${day}`;
   }
+  
+  showValidationError() {
+    if (!this.isFormValid) {
+      return 'Form is not valid or file is not selected';
+    } else {
+      return ''; // Return an empty string when there are no errors
+    }
+  }
+  
+  
 }

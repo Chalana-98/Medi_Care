@@ -120,10 +120,21 @@
         <!-- Navbar Horizantal-->
         <nav class="navbar" id="navbarHorizantal">
           <div class="container-fluid">
-            <form class="d-flex" role="search" id="search">
+            <!-- <form class="d-flex" role="search" id="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search"></i></span>
-            </form>
+            </form> -->
+            <!-- Search input field -->
+            <div class="mb-3">
+            
+              <input type="text" class="form-control" id="patientIdSearch" [(ngModel)]="searchPatientId" placeholder="Search by Patient ID">
+
+            </div>
+
+            <!-- Search button -->
+            <button type="button" class="btn btn-primary" (click)="filterRecords(searchPatientId)">Search</button>
+            
+
             <div id="navRight">
               <div class="container text-center">
                 <div class="row" id="right">
@@ -155,91 +166,35 @@
         <h1>Activity Log</h1>
 
         <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Patient ID</th>
-              <th scope="col">Category</th>
-              <th scope="col">Date</th>
-              <th scope="col"> </th>
-              <th scope="col"> </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Medical Report</td>
-              <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm btn-outline col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
-              <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Medical Record</td>
-              <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
-              <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Medical Report</td>
-              <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
-              <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Medical Record</td>
-              <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
-              <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td>Medical Report</td>
-              <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
-              <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
-            </tr>
-            <tr>
-              <th scope="row">6</th>
-              <td>Prescription</td>
-              <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
-              <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
-            </tr>
-            <tr>
-              <th scope="row">7</th>
-              <td>Medical Report</td>
-              <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
-              <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
-            </tr>
-            <tr>
-              <th scope="row">8</th>
-              <td>Medical Record</td>
-              <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
-              <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
-            </tr>
-            <tr>
-              <th scope="row">9</th>
-              <td>Medical Record</td>
-              <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
-              <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
-            </tr>
-            <tr>
-              <th scope="row">10</th>
-              <td>Prescription</td>
-              <td>28 - 01 - 2023</td> 
-              <td><button type="button" class="btn btn-sm col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button></td>
-              <td><button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-         
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Patient ID</th>
+                <th scope="col">Description</th>
+                <th scope="col">Date</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let record of filteredMedicalRecords">
+                <th scope="row">{{ record.patientId }}</th>
+                <td>{{ record.medicalRecordDescription }}</td>
+                <td>{{ record.medicalRecordDate | date:'dd-MM-yyyy' }}</td>
+                <td>
+                  <button type="button" class="btn btn-sm btn-outline col-16 mx-auto custom-btn" style="--bs-btn-btn-padding-y: .5rem;">Show More</button>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-sm col-12 mx-auto custom-btn">Edit</button>
+                </td>
+              </tr>
+            </tbody>
+            
+            
+            
+          </table>
+        </div>
+        
         <!-- /content table -->
   
       </div>
