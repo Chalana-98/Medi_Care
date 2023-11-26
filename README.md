@@ -1,4 +1,4 @@
-# MediCare
+# MediCare This is a Angular and .Net Web API project
 This is a Angular and .Net Web API project 
 
 
