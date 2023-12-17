@@ -1,14 +1,21 @@
-<section class="" style="background-color: #eee;">
+<section class="" style="background-color: #eee">
   <nav class="navbar navbar-expand-lg navbar-light bg-light-blue">
     <div class="container">
       <!-- Logo on the left -->
       <a class="navbar-brand" href="#">
-        <img src="assets/logo1-01.png" width="200" height="100">
+        <img src="assets/logo1-01.png" width="200" height="100" />
       </a>
 
       <!-- Button for mobile navigation toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -16,16 +23,22 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <!-- Your Angular Material buttons -->
-          <li class="nav-item" style="margin-right: 3vw;">
-            <button mat-button color="primary" routerLink="/home_page">Home</button>
+          <li class="nav-item" style="margin-right: 3vw">
+            <button mat-button color="primary" routerLink="/home_page">
+              Home
+            </button>
           </li>
-          <li class="nav-item" style="margin-right: 3vw;">
-            <button mat-button color="primary" routerLink="/blogs_page">Blogs & Article</button>
+          <li class="nav-item" style="margin-right: 3vw">
+            <button mat-button color="primary" routerLink="/blogs_page">
+              Blogs & Article
+            </button>
           </li>
-          <li class="nav-item" style="margin-right: 3vw;">
-            <button mat-button color="primary" routerLink="/matrix_page">Health Matrix</button>
+          <li class="nav-item" style="margin-right: 3vw">
+            <button mat-button color="primary" routerLink="/matrix_page">
+              Health Matrix
+            </button>
           </li>
-          <li class="nav-item" style="margin-right: 3vw;">
+          <li class="nav-item" style="margin-right: 3vw">
             <mat-menu #menu="matMenu">
               <button mat-menu-item routerLink="/login">
                 <mat-icon>sync</mat-icon>
@@ -40,77 +53,85 @@
                 Settings
               </button>
             </mat-menu>
-            <button mat-icon-button [matMenuTriggerFor]="menu" color="primary" aria-label="Profile">
+            <button
+              mat-icon-button
+              [matMenuTriggerFor]="menu"
+              color="primary"
+              aria-label="Profile"
+            >
               <mat-icon>account_circle</mat-icon>
             </button>
           </li>
         </ul>
       </div>
     </div>
-
-
   </nav>
 
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
-
-
-
-
-        <div class="card" style="border-radius: 1rem;">
-
-
-
+        <div class="card" style="border-radius: 1rem">
           <div class="row g-0">
             <div class="col-md-6 col-lg-5 d-none d-md-block">
-              <img src="assets/consultant_3.jpg" alt="login form" class="img-fluid "
-                style="border-radius: 1rem 0 0 1rem;" />
+              <img
+                src="assets/consultant_3.jpg"
+                alt="login form"
+                class="img-fluid"
+                style="border-radius: 1rem 0 0 1rem"
+              />
             </div>
 
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
-                <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="mx-1 mx-md-4">
-
-
+                <form
+                  #loginForm="ngForm"
+                  (ngSubmit)="onSubmit()"
+                  class="mx-1 mx-md-4"
+                >
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input [(ngModel)]="loginUser.email" name="email" class="form-control" placeholder="Email"
-                        required>
-
+                      <input
+                        [(ngModel)]="loginUser.email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Email"
+                        required
+                      />
                     </div>
                   </div>
-
-
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="input-group mb-3">
-
-                      <input [(ngModel)]="loginUser.password" name="password" class="form-control"
-                        placeholder="Password" id="password" value="" required>
-                        <span class="input-group-text">
-                          <i class="far fa-eye-slash" id="togglePassword"
-                          style="cursor: pointer"></i>
+                      <input
+                        [(ngModel)]="loginUser.password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Password"
+                        id="password"
+                        value=""
+                        required
+                      />
+                      <span class="input-group-text">
+                        <i
+                          class="far fa-eye-slash"
+                          id="togglePassword"
+                          style="cursor: pointer"
+                        ></i>
                       </span>
-                      <script>
-                        
-                      </script>
+                      <script></script>
                     </div>
-                    
-                 
                   </div>
 
-
-
-
-                  <div class="text-danger" *ngIf="loginForm.submitted && !loginForm.valid">
+                  <div
+                    class="text-danger"
+                    *ngIf="loginForm.submitted && !loginForm.valid"
+                  >
                     Please check the required fields.
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-
               </div>
             </div>
           </div>

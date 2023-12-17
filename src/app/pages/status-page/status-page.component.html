@@ -2,29 +2,42 @@
   <div class="container">
     <!-- Logo on the left -->
     <a class="navbar-brand" href="#">
-      <img src="assets/logo1-01.png" width="200" height="100">
+      <img src="assets/logo1-01.png" width="200" height="100" />
     </a>
 
     <!-- Button for mobile navigation toggle -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Navigation links on the right -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav" >
+      <ul class="navbar-nav">
         <!-- Your Angular Material buttons -->
-        <li class="nav-item" style="margin-right: 3vw;">
-          <button mat-button color="primary" routerLink="/home_page">Home</button>
+        <li class="nav-item" style="margin-right: 3vw">
+          <button mat-button color="primary" routerLink="/home_page">
+            Home
+          </button>
         </li>
-        <li class="nav-item" style="margin-right: 3vw;">
-          <button mat-button color="primary" routerLink="/blogs_page">Blogs & Article</button>
+        <li class="nav-item" style="margin-right: 3vw">
+          <button mat-button color="primary" routerLink="/blogs_page">
+            Blogs & Article
+          </button>
         </li>
-        <li class="nav-item" style="margin-right: 3vw;">
-          <button mat-button color="primary" routerLink="/matrix_page">Health Matrix</button>
+        <li class="nav-item" style="margin-right: 3vw">
+          <button mat-button color="primary" routerLink="/matrix_page">
+            Health Matrix
+          </button>
         </li>
-        <li class="nav-item" style="margin-right: 3vw;">
+        <li class="nav-item" style="margin-right: 3vw">
           <mat-menu #menu="matMenu">
             <button mat-menu-item routerLink="/login">
               <mat-icon>sync</mat-icon>
@@ -39,17 +52,19 @@
               Settings
             </button>
           </mat-menu>
-          <button mat-icon-button [matMenuTriggerFor]="menu" color="primary" aria-label="Profile">
+          <button
+            mat-icon-button
+            [matMenuTriggerFor]="menu"
+            color="primary"
+            aria-label="Profile"
+          >
             <mat-icon>account_circle</mat-icon>
           </button>
         </li>
       </ul>
     </div>
   </div>
-
-  
 </nav>
-
 
 <div class="container">
   <div class="header">
@@ -57,89 +72,105 @@
   </div>
 </div>
 
-<div class="chart"> 
-<form class="row gx-3 gy-2 align-items-center">
-  <div class="col-sm-auto">
+<div class="chart">
+  <form class="row gx-3 gy-2 align-items-center">
+    <div class="col-sm-auto">
+      <div class="form-check">
+        <label class="form-check-label"> You are </label>
+      </div>
+    </div>
+    <div class="col-sm-1">
+      <input
+        type="text"
+        class="form-control"
+        id="specificaeight"
+        [placeholder]="age"
+      />
+    </div>
+    <div class="col-sm-auto">
+      <div class="form-check">
+        <label class="form-check-label"> Years Old </label>
+      </div>
+    </div>
+    <div class="col-sm-1">
+      <input
+        type="text"
+        class="form-control"
+        id="specificwheight"
+        [placeholder]="gender === 'male' ? 'Male' : 'Female'"
+      />
+    </div>
+    <div class="col-sm-auto">
+      <div class="form-check">
+        <label class="form-check-label"> Who is </label>
+      </div>
+    </div>
+    <div class="col-sm-1">
+      <input
+        type="text"
+        class="form-control"
+        id="specificheight"
+        [placeholder]="height"
+      />
+    </div>
+    <div class="col-sm-auto">
+      <div class="form-check">
+        <label class="form-check-label"> cm tall and weights </label>
+      </div>
+    </div>
+    <div class="col-sm-1">
+      <input
+        type="text"
+        class="form-control"
+        id="specificwweight"
+        [placeholder]="weight"
+      />
+    </div>
+    <div class="col-sm-auto">
+      <div class="form-check">
+        <label class="form-check-label"> kg while being </label>
+      </div>
+    </div>
+    <div class="col-1">
+      <input
+        type="text"
+        class="form-control"
+        id="specificwheight"
+        [placeholder]="activity"
+      />
+    </div>
 
-    <div class="form-check">
-      <label class="form-check-label" >
-        You are
-      </label>
+    <div class="col-sm-2">
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="navigateToMatrixPage()"
+      >
+        Re-Calculate
+      </button>
     </div>
-  </div>
-  <div class="col-sm-1">
-     
-    <input type="text" class="form-control" id="specificaeight" [placeholder]="age">
-    
-  </div>
-  <div class="col-sm-auto">
-    <div class="form-check">
-      <label class="form-check-label" >
-        Years Old
-      </label>
-    </div>
-  </div>
-  <div class="col-sm-1">
-    
-    <input type="text" class="form-control" id="specificwheight" [placeholder]="gender === 'male' ? 'Male' : 'Female'">
-    
-  </div>
-  <div class="col-sm-auto">
-    <div class="form-check">
-      <label class="form-check-label" >
-        Who is
-      </label>
-    </div>
-  </div>
-  <div class="col-sm-1">  
-    <input type="text" class="form-control" id="specificheight" [placeholder]="height">
-  </div>
-  <div class="col-sm-auto">
-    <div class="form-check">
-      <label class="form-check-label" >
-        cm tall and weights
-      </label>
-    </div>
-  </div>
-  <div class="col-sm-1">  
-    <input type="text" class="form-control" id="specificwweight" [placeholder]="weight">
-    </div>
-  <div class="col-sm-auto">
-    <div class="form-check">
-      <label class="form-check-label" >
-        kg while being
-      </label>
-    </div>
-  </div>
-  <div class="col-1">
-    
-    <input type="text" class="form-control" id="specificwheight" [placeholder]="activity">
-  </div>
-  
-  <div class="col-sm-2">
-    <button type="button" class="btn btn-primary" (click)="navigateToMatrixPage()">Re-Calculate</button>
-  </div>
-  
-</form>
-
+  </form>
 </div>
-
 
 <div class="container mt-5">
   <div class="row">
     <!-- First Column -->
-    <div class="col-xl-4 column-space ">
+    <div class="col-xl-4 column-space">
       <!-- Card Component -->
       <p class="card-title">Your Maintaince Calories</p>
       <div class="card custom-card">
         <div class="card-body">
-          <div class="valuee"><p>{{ tdee | number: '1.0-0'}}</p></div>
+          <div class="valuee">
+            <p>{{ tdee | number : "1.0-0" }}</p>
+          </div>
           <p>calories per day</p>
-         </div>
-         <div class="card-body">
-          <div class="valuee"><p>{{ tdee*7 | number: '1.0-0'}}</p></div>
+        </div>
+        <div class="card-body">
+          <div class="valuee">
+            <p>{{ tdee * 7 | number : "1.0-0" }}</p>
+          </div>
           <p>calories per week</p>
-         </div>
+        </div>
       </div>
     </div>
 
@@ -147,42 +178,46 @@
     <div class="col-xl-8">
       <!-- Paragraph -->
       <div class="para">
-        <p>Based on your stats, the best estimate for your maintenance calories is <b>{{ tdee | number: '1.0-0'}}</b> calories per day based on the Mifflin-St Jeor Formula, which is widely known to be the most accurate. The table below shows the difference if you were to have selected a different activity level.</p>
-      </div> <!-- Table -->
+        <p>
+          Based on your stats, the best estimate for your maintenance calories
+          is <b>{{ tdee | number : "1.0-0" }}</b> calories per day based on the
+          Mifflin-St Jeor Formula, which is widely known to be the most
+          accurate. The table below shows the difference if you were to have
+          selected a different activity level.
+        </p>
+      </div>
+      <!-- Table -->
       <div class="detailtable">
-      <table class="table">
-        <tbody>
-
-        <tr [ngClass]="{'highlighted': activity === 'Sedentary(Office Job)V'}">
-          <td>Sedentary</td>
-          <td>{{ (bmr * 1.2) | number: '1.0-0' }} calories per day</td>
-        </tr>
-        <tr [ngClass]="{'highlighted': activity === 'Light Exercise'}">
-          <td>Light Exercise </td>
-          <td>{{ (bmr * 1.375) | number: '1.0-0' }} calories per day</td>
-        </tr>
-        <tr [ngClass]="{'highlighted': activity === 'Moderate Exercise'}">
-          <td>Moderate Exercise </td>
-          <td>{{ (bmr * 1.55) | number: '1.0-0' }} calories per day</td>
-        </tr>
-        <tr [ngClass]="{'highlighted': activity === 'Heavy Exercise'}">
-          <td>Heavy Exercise</td>
-          <td>{{ (bmr * 1.725) | number: '1.0-0' }} calories per day</td>
-        </tr>
-        <tr [ngClass]="{'highlighted': activity === 'Athlete'}">
-          <td>Athlete</td>
-          <td> {{ (bmr * 1.9) | number: '1.0-0' }} calories per day</td>
-        </tr>
-        </tbody>
-      </table>
+        <table class="table">
+          <tbody>
+            <tr
+              [ngClass]="{ highlighted: activity === 'Sedentary(Office Job)V' }"
+            >
+              <td>Sedentary</td>
+              <td>{{ bmr * 1.2 | number : "1.0-0" }} calories per day</td>
+            </tr>
+            <tr [ngClass]="{ highlighted: activity === 'Light Exercise' }">
+              <td>Light Exercise</td>
+              <td>{{ bmr * 1.375 | number : "1.0-0" }} calories per day</td>
+            </tr>
+            <tr [ngClass]="{ highlighted: activity === 'Moderate Exercise' }">
+              <td>Moderate Exercise</td>
+              <td>{{ bmr * 1.55 | number : "1.0-0" }} calories per day</td>
+            </tr>
+            <tr [ngClass]="{ highlighted: activity === 'Heavy Exercise' }">
+              <td>Heavy Exercise</td>
+              <td>{{ bmr * 1.725 | number : "1.0-0" }} calories per day</td>
+            </tr>
+            <tr [ngClass]="{ highlighted: activity === 'Athlete' }">
+              <td>Athlete</td>
+              <td>{{ bmr * 1.9 | number : "1.0-0" }} calories per day</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
-</div>
-
-
-
-
 
 <!-- Second row -->
 
@@ -193,68 +228,86 @@
       <div class="form-group">
         <p>Ideal Weight : {{ idealWeight }}</p>
       </div>
-     <div class="para">
-      <p>Ideal body weight (IBW) is defined as weight for height at the lowest risk of mortality. </p>
-      <p>Your ideal body weight is estimated to be between <b>{{ idealWeight }}</b> </p>
-     </div>
+      <div class="para">
+        <p>
+          Ideal body weight (IBW) is defined as weight for height at the lowest
+          risk of mortality.
+        </p>
+        <p>
+          Your ideal body weight is estimated to be between
+          <b>{{ idealWeight }}</b>
+        </p>
+      </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <p>BMI Score : {{  bmi | number: '1.1-1'  }}</p>
+        <p>BMI Score : {{ bmi | number : "1.1-1" }}</p>
       </div>
       <div class="para">
-        <p> Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. Your BMI is <b>{{  bmi | number: '1.1-1'  }}</b> , which means you are classified as <b> {{ bmiClassification }}</b>.</p>
+        <p>
+          Body mass index (BMI) is a measure of body fat based on height and
+          weight that applies to adult men and women. Your BMI is
+          <b>{{ bmi | number : "1.1-1" }}</b> , which means you are classified
+          as <b> {{ bmiClassification }}</b
+          >.
+        </p>
       </div>
       <!-- Table -->
       <div class="secotable">
-      <table class="table table-bordered">
-         <tbody>
-          <tr [ngClass]="{ 'selected-category': bmiCategory === 'Underweight' }">
-            <td>18.5 or less</td>
-            <td>Underweight</td>
-          </tr>
-          <tr [ngClass]="{ 'selected-category': bmiCategory === 'Normal Weight' }">
-          <td>18.5 - 24.99 </td>
-          <td>Normal Weight </td>
-        </tr>
-        <tr [ngClass]="{ 'selected-category': bmiCategory === 'Overweight' }">
-          <td>25 - 29.99 </td>
-          <td>Overweight</td>
-        </tr>
-        <tr [ngClass]="{ 'selected-category': bmiCategory === 'Obese' }">
-          <td>30+    </td>
-          <td>Obese</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    </div>
+        <table class="table table-bordered">
+          <tbody>
+            <tr
+              [ngClass]="{ 'selected-category': bmiCategory === 'Underweight' }"
+            >
+              <td>18.5 or less</td>
+              <td>Underweight</td>
+            </tr>
+            <tr
+              [ngClass]="{
+                'selected-category': bmiCategory === 'Normal Weight'
+              }"
+            >
+              <td>18.5 - 24.99</td>
+              <td>Normal Weight</td>
+            </tr>
+            <tr
+              [ngClass]="{ 'selected-category': bmiCategory === 'Overweight' }"
+            >
+              <td>25 - 29.99</td>
+              <td>Overweight</td>
+            </tr>
+            <tr [ngClass]="{ 'selected-category': bmiCategory === 'Obese' }">
+              <td>30+</td>
+              <td>Obese</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-
-
+</div>
 
 <!--footer-->
 <footer class="text-white py-4">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
       <!-- Logo on the left -->
-      <img src="assets/logonav.png" alt="Logo" width="200" height="80">
+      <img src="assets/logonav.png" alt="Logo" width="200" height="80" />
 
       <!-- Contact details on the right -->
       <div class="contact-details">
         <p>Contact: medicare@gmail.com</p>
         <p>Phone: (123) 456-7890</p>
       </div>
-      
+
       <!-- Social icons on the right -->
       <div class="social-icons">
-        <a href="#"><i class="fab fa-google" ></i></a>
-        <a href="#"><i class="fab fa-facebook" ></i></a>
-        <a href="#"><i class="fa-solid fa-paper-plane" ></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
       </div>
     </div>
-    
+
     <div class="row mt-4">
       <div class="col text-center">
         &copy; 2023 Medi Care. All rights reserved.

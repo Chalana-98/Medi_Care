@@ -1,32 +1,40 @@
-<section class="" style="background-color: #eee;">
-
+<section class="" style="background-color: #eee">
   <nav class="navbar navbar-expand-lg navbar-light bg-light-blue">
     <div class="container">
-
       <a class="navbar-brand" href="#">
-        <img src="assets/logo1-01.png" width="200" height="100">
+        <img src="assets/logo1-01.png" width="200" height="100" />
       </a>
 
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-
-          <li class="nav-item" style="margin-right: 3vw;">
-            <button mat-button color="primary" routerLink="/home_page">Home</button>
+          <li class="nav-item" style="margin-right: 3vw">
+            <button mat-button color="primary" routerLink="/home_page">
+              Home
+            </button>
           </li>
-          <li class="nav-item" style="margin-right: 3vw;">
-            <button mat-button color="primary" routerLink="/blogs_page">Blogs & Article</button>
+          <li class="nav-item" style="margin-right: 3vw">
+            <button mat-button color="primary" routerLink="/blogs_page">
+              Blogs & Article
+            </button>
           </li>
-          <li class="nav-item" style="margin-right: 3vw;">
-            <button mat-button color="primary" routerLink="/matrix_page">Health Matrix</button>
+          <li class="nav-item" style="margin-right: 3vw">
+            <button mat-button color="primary" routerLink="/matrix_page">
+              Health Matrix
+            </button>
           </li>
-          <li class="nav-item" style="margin-right: 3vw;">
+          <li class="nav-item" style="margin-right: 3vw">
             <mat-menu #menu="matMenu">
               <button mat-menu-item routerLink="/login">
                 <mat-icon>sync</mat-icon>
@@ -41,95 +49,139 @@
                 Settings
               </button>
             </mat-menu>
-            <button mat-icon-button [matMenuTriggerFor]="menu" color="primary" aria-label="Profile">
+            <button
+              mat-icon-button
+              [matMenuTriggerFor]="menu"
+              color="primary"
+              aria-label="Profile"
+            >
               <mat-icon>account_circle</mat-icon>
             </button>
           </li>
         </ul>
       </div>
     </div>
-
-
   </nav>
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
-        <div class="card text-black mt-5" style="border-radius: 25px;">
-
+        <div class="card text-black mt-5" style="border-radius: 25px">
           <div class="card-body p-md-5">
             <label class="switch mt-4">
-              <input type="checkbox" (change)="onSwitchChange($event)">
+              <input type="checkbox" (change)="onSwitchChange($event)" />
               <span class="slider"></span>
             </label>
             <div class="row justify-content-center">
-
-
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-
-
                 <!-- form -->
-                <form #registerForm="ngForm" (ngSubmit)="onSubmit()" class="mx-1 mx-md-4">
+                <form
+                  #registerForm="ngForm"
+                  (ngSubmit)="onSubmit()"
+                  class="mx-1 mx-md-4"
+                >
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input [(ngModel)]="registerUser.firstName" name="firstName" class="form-control"
-                        placeholder="First Name" required>
+                      <input
+                        [(ngModel)]="registerUser.firstName"
+                        name="firstName"
+                        class="form-control"
+                        placeholder="First Name"
+                        required
+                      />
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input [(ngModel)]="registerUser.lastName" name="lastName" class="form-control"
-                        placeholder="Last Name" required>
+                      <input
+                        [(ngModel)]="registerUser.lastName"
+                        name="lastName"
+                        class="form-control"
+                        placeholder="Last Name"
+                        required
+                      />
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input [(ngModel)]="registerUser.password" name="password" class="form-control"
-                        placeholder="Password" required>
+                      <input
+                        [(ngModel)]="registerUser.password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Password"
+                        required
+                      />
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-id-card fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input [(ngModel)]="registerUser.nic" name="nic" class="form-control" placeholder="NIC" required>
+                      <input
+                        [(ngModel)]="registerUser.nic"
+                        name="nic"
+                        class="form-control"
+                        placeholder="NIC"
+                        required
+                      />
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-birthday-cake fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="date" [(ngModel)]="registerUser.birthday" name="birthday" class="form-control"
-                        placeholder="Birthday" required>
+                      <input
+                        type="date"
+                        [(ngModel)]="registerUser.birthday"
+                        name="birthday"
+                        class="form-control"
+                        placeholder="Birthday"
+                        required
+                      />
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input [(ngModel)]="registerUser.email" name="email" class="form-control" placeholder="Email"
-                        required>
+                      <input
+                        [(ngModel)]="registerUser.email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Email"
+                        required
+                      />
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-address-card fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input [(ngModel)]="registerUser.address" name="address" class="form-control"
-                        placeholder="Address" required>
+                      <input
+                        [(ngModel)]="registerUser.address"
+                        name="address"
+                        class="form-control"
+                        placeholder="Address"
+                        required
+                      />
                     </div>
                   </div>
-
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user-tag fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input [(ngModel)]="registerUser.userType" name="userType" class="form-control"
-                        placeholder="User Type" readonly required>
+                      <input
+                        [(ngModel)]="registerUser.userType"
+                        name="userType"
+                        class="form-control"
+                        placeholder="User Type"
+                        readonly
+                        required
+                      />
                     </div>
                   </div>
 
@@ -137,16 +189,24 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-weight fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input [(ngModel)]="registerUser.weight" name="weight" class="form-control"
-                          placeholder="Weight">
+                        <input
+                          [(ngModel)]="registerUser.weight"
+                          name="weight"
+                          class="form-control"
+                          placeholder="Weight"
+                        />
                       </div>
                     </div>
 
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-arrows-alt-v fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input [(ngModel)]="registerUser.height" name="height" class="form-control"
-                          placeholder="Height">
+                        <input
+                          [(ngModel)]="registerUser.height"
+                          name="height"
+                          class="form-control"
+                          placeholder="Height"
+                        />
                       </div>
                     </div>
                   </div>
@@ -155,38 +215,70 @@
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-stethoscope fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
-                        <input [(ngModel)]="registerUser.speciality" name="speciality" class="form-control"
-                          placeholder="Speciality">
+                        <input
+                          [(ngModel)]="registerUser.speciality"
+                          name="speciality"
+                          class="form-control"
+                          placeholder="Speciality"
+                        />
                       </div>
                     </div>
                   </div>
 
-                  <div *ngFor="let phoneNumber of registerUser.phoneNumbers; let i = index"
-                    class="d-flex flex-row align-items-center mb-4">
+                  <div
+                    *ngFor="
+                      let phoneNumber of registerUser.phoneNumbers;
+                      let i = index
+                    "
+                    class="d-flex flex-row align-items-center mb-4"
+                  >
                     <i class="fas fa-phone fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <div class="d-flex">
-                        <input [(ngModel)]="phoneNumber.phoneNumber" name="phoneNumber" class="form-control"
-                          placeholder="Phone Number" required>
-                        <button type="button" *ngIf="i === 0" (click)="addPhoneNumber()" class="btn btn-success"><i
-                            class="fas fa-plus"></i></button>
-                        <button type="button" *ngIf="i > 0" (click)="removePhoneNumber(i)" class="btn btn-danger"><i
-                            class="fas fa-minus"></i></button>
+                        <input
+                          [(ngModel)]="phoneNumber.phoneNumber"
+                          name="phoneNumber"
+                          class="form-control"
+                          placeholder="Phone Number"
+                          required
+                        />
+                        <button
+                          type="button"
+                          *ngIf="i === 0"
+                          (click)="addPhoneNumber()"
+                          class="btn btn-success"
+                        >
+                          <i class="fas fa-plus"></i>
+                        </button>
+                        <button
+                          type="button"
+                          *ngIf="i > 0"
+                          (click)="removePhoneNumber(i)"
+                          class="btn btn-danger"
+                        >
+                          <i class="fas fa-minus"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
 
-
-                  <div class="text-danger" *ngIf="registerForm.submitted && !registerForm.valid">
+                  <div
+                    class="text-danger"
+                    *ngIf="registerForm.submitted && !registerForm.valid"
+                  >
                     Please check the required fields.
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
               </div>
-              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                <img src="assets/back5.jpg" class="img-fluid" alt="Sample image">
-
+              <div
+                class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+              >
+                <img
+                  src="assets/back5.jpg"
+                  class="img-fluid"
+                  alt="Sample image"
+                />
               </div>
             </div>
           </div>
