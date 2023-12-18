@@ -193,23 +193,24 @@
             <tr
               [ngClass]="{ highlighted: activity === 'Sedentary(Office Job)V' }"
             >
-              <td>Sedentary</td>
+            <td class="namelist">Sedentary</td>
+
               <td>{{ bmr * 1.2 | number : "1.0-0" }} calories per day</td>
             </tr>
             <tr [ngClass]="{ highlighted: activity === 'Light Exercise' }">
-              <td>Light Exercise</td>
+              <td class="namelist">Light Exercise</td>
               <td>{{ bmr * 1.375 | number : "1.0-0" }} calories per day</td>
             </tr>
             <tr [ngClass]="{ highlighted: activity === 'Moderate Exercise' }">
-              <td>Moderate Exercise</td>
+              <td class="namelist">Moderate Exercise</td>
               <td>{{ bmr * 1.55 | number : "1.0-0" }} calories per day</td>
             </tr>
             <tr [ngClass]="{ highlighted: activity === 'Heavy Exercise' }">
-              <td>Heavy Exercise</td>
+              <td class="namelist">Heavy Exercise</td>
               <td>{{ bmr * 1.725 | number : "1.0-0" }} calories per day</td>
             </tr>
             <tr [ngClass]="{ highlighted: activity === 'Athlete' }">
-              <td>Athlete</td>
+              <td class="namelist">Athlete</td>
               <td>{{ bmr * 1.9 | number : "1.0-0" }} calories per day</td>
             </tr>
           </tbody>
@@ -226,7 +227,7 @@
     <div class="col-md-6">
       <!-- Form Fields -->
       <div class="form-group">
-        <p>Ideal Weight : {{ idealWeight }}</p>
+        <p class="namelist">Ideal Weight : {{ idealWeight }}</p>
       </div>
       <div class="para">
         <p>
@@ -259,7 +260,7 @@
             <tr
               [ngClass]="{ 'selected-category': bmiCategory === 'Underweight' }"
             >
-              <td>18.5 or less</td>
+              <td class="namelist">18.5 or less</td>
               <td>Underweight</td>
             </tr>
             <tr
@@ -267,17 +268,17 @@
                 'selected-category': bmiCategory === 'Normal Weight'
               }"
             >
-              <td>18.5 - 24.99</td>
+              <td class="namelist">18.5 - 24.99</td>
               <td>Normal Weight</td>
             </tr>
             <tr
               [ngClass]="{ 'selected-category': bmiCategory === 'Overweight' }"
             >
-              <td>25 - 29.99</td>
+              <td class="namelist">25 - 29.99</td>
               <td>Overweight</td>
             </tr>
             <tr [ngClass]="{ 'selected-category': bmiCategory === 'Obese' }">
-              <td>30+</td>
+              <td class="namelist">30+</td>
               <td>Obese</td>
             </tr>
           </tbody>
